@@ -1,0 +1,61 @@
+/* pages/analyse/analyse.wxss */
+.analyse-info{
+  .analyse-info-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16rpx;
+    .analyse-info-status{
+      color: #6CBF19;
+      font-size: 28rpx;
+      display: flex;
+      align-items: center;
+      .analyse-info-cycle{
+        width: 28rpx;
+        height: 28rpx;
+        background-color: rgba(108, 191, 25, 0.3);
+        border-radius: 50%;
+        margin-right: 8rpx;
+        .analyse-info-inner{
+          width: 16rpx;
+          height: 16rpx;
+          border-radius: 50%;
+          position: relative;
+          background-color: #6CBF19;
+          top: 6rpx;
+          left: 6rpx;
+        }
+      }
+    }
+  }
+  .analyse-btns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 16rpx 0;
+    .analyse-btn{
+      width: 148rpx;
+      height: 52rpx;
+      color: #333333;
+      font-size: 22rpx;
+      border: 2rpx solid #149F97;
+      border-radius: 8rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8rpx 0;
+      .analyse-btn-icon{
+        color: #149F97;
+        margin-right: 8rpx;
+      }
+    }
+  }
+}
+
+.analyse-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+  .analyse-fold{
+    color: #149F97;
+  }
+}

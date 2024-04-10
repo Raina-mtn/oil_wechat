@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "task-list":"./components/taskList/taskList",
+    "task-collect":"./components/taskCollect/taskCollect",
+    "task-cycle":"./components/taskCycle/taskCycle"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "下发任务",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

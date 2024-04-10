@@ -1,0 +1,68 @@
+/* pages/system/robotmanage/robot.wxss */
+.container{
+  .top-button{
+    .add-button{
+      width: 230rpx;
+      height: 64rpx;
+      border-radius: 10rpx;
+      font-size: 24rpx;
+      margin-right: 30rpx;
+    }
+    .edit-button{
+      width: 230rpx;
+      height: 64rpx;
+      border-radius: 10rpx;
+      font-size: 24rpx;
+    }
+  }
+  .robot-list{
+    background-color: #ffffff;
+    margin-top: 20rpx;
+    .robot-info{
+      height: 96rpx;
+      padding: 0 24rpx;
+      .info-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-bottom: 3rpx solid #EAEAEA;
+      }
+    }
+    .robot-info:last-child .info-container{
+      border-bottom: none; /* 或 border-bottom: transparent; 取消最后一个元素的下边框 */
+    }
+  }
+  .my-custom-class{
+    border-radius: 12rpx;
+    width: 85%;
+    overflow: visible;
+    .select-content{
+      width: 400rpx;
+    }
+    .cancel-button{
+      width: 250rpx;
+      background-color: #fff;
+      border: 1rpx solid #CCCCCC;
+      font-size: 30rpx;
+    }
+    .submit-button{
+      width: 250rpx;
+      background-color: #14A097;
+      border: 1rpx solid #14A097;
+      color: #fff;
+      font-size: 30rpx;
+    }
+    // 标题样式
+    .van-dialog__header{
+      padding: 20rpx 0;
+      background-color: rgb(220 246 246);
+    }
+    // 隐藏了默认按钮
+    .van-hairline--top.van-dialog__footer{
+      display: none;
+    }
+  }
+}

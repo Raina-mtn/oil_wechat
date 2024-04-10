@@ -1,0 +1,15 @@
+<!--pages/task/components/taskDelete/taskDelete.wxml-->
+<van-dialog
+  use-slot
+  show="{{ show }}"
+  show-confirm-button="{{false}}"
+>
+  <view class="dialog-container">
+    <image class="delete-icon" src="../../../../../assets/images/ic_remind_execute.png" mode="aspectFill"/>
+    <view>是否立即执行</view>
+    <view class="btns">
+      <van-button custom-class="btn" plain bind:tap="closeDialog">取消</van-button>
+      <van-button loading="{{loading}}" custom-class="btn" color="#14A097" bind:tap="submit">确认</van-button>
+    </view>
+  </view>
+</van-dialog>

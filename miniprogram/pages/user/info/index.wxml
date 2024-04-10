@@ -1,0 +1,24 @@
+<!--pages/user/info/index.wxml-->
+<view class="user-info-container">
+  <view class="user-info-avater" bindtap="upload">
+    <van-uploader
+      file-list="{{ fileList }}"
+      max-count="1"
+      bind:after-read="afterRead"
+    >
+      <view class="user-info-avater-upload"></view>
+    </van-uploader>
+    <image src="../../../assets/images/userdetails_btn_replaceavatar.png" class="user-info-avater-icon"></image>
+  </view>
+  <view class="user-info-panel">
+    <van-cell-group>
+      <van-cell wx:for="{{userInfoList}}" wx:key="{{item.label}}" title="{{item.label}}" value="{{item.data}}" custom-class="user-panel-item">
+        <text slot="icon" class="iconfont {{item.icon}}"></text>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <view class="btns">
+    <van-button plain color="#149F97" custom-class="btn" bind:tap="delete">取 消</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="execute">确 认</van-button>
+  </view>
+</view>

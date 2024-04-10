@@ -1,0 +1,4 @@
+<!--pages/analyse/parameters/index.wxml-->
+<view class="parameters-container">
+  <parameter-item wx:for="{{parameterList}}"  parameterItem="{{item}}"></parameter-item>
+</view>

@@ -1,0 +1,78 @@
+<!--pages/task/components/cycleDialog/cycleDialog.wxml-->
+<van-dialog
+  use-slot
+  show="{{ show }}"
+  show-confirm-button="{{false}}"
+  customStyle="height:70%;"
+>
+  <view class="dialog-title">周期执行</view>
+  <view class="dialog-container">
+    <view class="currenItem">
+     <text class="iconfont icon-ic_taskname task-item-icon" style="color: #2BA8A0;margin-right: 8rpx;font-weight: 400;"></text>
+     <text class="taskName">{{currenItem.taskName}}</text>
+     <view>点位数量：{{currenItem.deviceIds.length||currenItem.deviceNum}}</view>
+     <!-- <view>编辑时间：{{currenItem.date}}</view> -->
+    </view>
+    <van-divider dashed borderColor="#14A09766" class="dialog-divider" />
+    <view>
+      <view>执行时间</view>
+      <view class="cycle-time" bind:tap="showCalendar">
+        <text>{{formData.startTime||'开始时间'}}</text>
+        <text class="iconfont icon-ic_time"></text>
+        <text>{{formData.endTime||'结束时间'}}</text>
+      </view>
+      <!-- min-date="946656000" -->
+      <van-calendar
+        show="{{ calendarShow }}"
+        type="range"
+        show-confirm
+        allow-same-day
+        bind:close="calendarClose"
+        bind:confirm="calendarConfirm"
+        style="height: 800rpx;"
+      />
+    </view>
+    <view style="margin-top: 38rpx;">
+      <view>任务间隔时间</view>
+      <view class="cycle-interval">
+        <view class="cycle-interval-item">
+          <van-field
+            value="{{ formData.intervalDays }}"
+            placeholder="请输入"
+            custom-class="cycle-custom-class"
+            input-class="cycle-field-class"
+            data-key="intervalDays"
+            bind:change="fieldChange"
+          />
+          天
+        </view>
+        <view class="cycle-interval-item">
+          <van-field
+            value="{{ formData.intervalHours }}"
+            placeholder="请输入"
+            custom-class="cycle-custom-class"
+            input-class="cycle-field-class"
+            data-key="intervalHours"
+            bind:change="fieldChange"
+          />
+          小时
+        </view>
+        <view class="cycle-interval-item">
+          <van-field
+            value="{{ formData.intervalMinutes }}"
+            placeholder="请输入"
+            custom-class="cycle-custom-class"
+            input-class="cycle-field-class"
+            data-key="intervalMinutes"
+            bind:change="fieldChange"
+          />
+          <view style="width: 48rpx;">分钟</view>
+        </view>
+      </view>
+    </view>
+    <view class="btns">
+      <van-button custom-class="btn" plain bind:tap="closeDialog">取消</van-button>
+      <van-button custom-class="btn" color="#14A097" bind:tap="submit">确认</van-button>
+    </view>
+  </view>
+</van-dialog>

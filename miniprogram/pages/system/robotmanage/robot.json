@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "机器人",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

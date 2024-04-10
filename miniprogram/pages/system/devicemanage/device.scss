@@ -1,0 +1,57 @@
+/* pages/system/devicemanage/device.wxss */
+.container {
+  .form-container{
+    display: flex;
+    .form-item{
+      min-width: 200rpx;
+      height: 64rpx;
+      line-height: 64rpx;
+      color: #333333;
+      background-color: #ffffff;
+      font-size: 28rpx;
+      border-radius: 8rpx;
+      text-align: center;
+      padding: 0 10rpx;
+    }
+  }
+
+  .bottom-list {
+    .list-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20rpx;
+      padding: 20rpx;
+      background-color: #ffffff;
+      flex-wrap: wrap;
+      position: relative;
+
+      .list-top {
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid #EAEAEA;
+        height: 50rpx;
+      }
+
+      .list-body {
+        height: auto;
+        width: 100%;
+
+        .list-info {
+          position: relative;
+          color: #666666;
+
+          label {
+            display: block;
+            margin-top: 20rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .add-button {
+    position: fixed;
+    right: 30rpx;
+    bottom: 80rpx;
+  }
+}

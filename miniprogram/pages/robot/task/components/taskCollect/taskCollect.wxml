@@ -1,0 +1,23 @@
+<!--pages/task/components/taskCollect/taskCollect.wxml-->
+<wxs module="filter" src="./util.wxs"></wxs>
+<view class="task-list-container">
+  <van-search model:value="{{ searchParams }}" placeholder="输入任务名称查询" clear-trigger="focus" clear-icon="clear" />
+  <!-- 任务列表 -->
+  <view class="task-list">
+    <task-item wx:for="{{searchList}}" wx:key="index" checkIndex="{{checkIndex}}" index="{{index}}" title="{{ item.taskName }}" data-index="{{index}}" data-item="{{item}}" bind:tap="check">
+      <view>点位数量：{{filter.deviceNum(item.deviceInfos)}}</view>3
+      <view>编辑时间：{{item.addTime}}</view>
+    </task-item>
+  </view>
+  <view class="btns">
+    <van-button plain color="#FA3320" custom-class="btn" bind:tap="delete">删 除</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="execute">立即执行</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="cycle">周期执行</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="cancleCollect">取消收藏</van-button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />
+<delete-dialog id="delete-dialog" bind:refresh="refresh"></delete-dialog>
+<execute-dialog id="execute-dialog"></execute-dialog>
+<cycle-dialog id="cycle-dialog"></cycle-dialog>
+<collect-dialog bind:refresh="refresh" id="collect-dialog" isCancel="{{true}}"></collect-dialog>

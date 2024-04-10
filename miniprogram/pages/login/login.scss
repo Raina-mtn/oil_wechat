@@ -1,0 +1,35 @@
+/* pages/login/login.wxss */
+.login-bg{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+.login{
+  width: 100vw;
+  height: 100vh;
+  .login-container{
+    height: 80vh;
+    padding:108rpx 56rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .login-title{
+      color: #14A097;
+      font-size: 64rpx;
+      font-weight: 500;
+      margin-bottom: 8rpx;
+    }
+    .login-form{
+      display: flex;
+      flex-direction: column;
+    }
+    .login-link{
+      display: flex;
+      justify-content: space-between;
+      color:#14A097;
+      font-size: 24rpx;
+      margin-bottom: 104rpx;
+    }
+  }
+}

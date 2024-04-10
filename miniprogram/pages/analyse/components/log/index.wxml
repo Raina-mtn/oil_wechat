@@ -1,0 +1,30 @@
+<!--pages/analyse/components/log/log.wxml-->
+<view wx:if="{{logShowList.length}}" class="log-container">
+  <image class="log-container-img" src="/assets/images/chromatographicanalysis_pic_log.png" mode=""/>
+  <view class="log-container-divider"></view>
+  <view class="log-container-info">
+    <view class="log-container-info-item" wx:for="{{logShowList}}">
+      <view class="log-container-info-cycle" style="background-color:#00C569;"></view>
+      <text style="margin-right:32rpx;">{{item.log}}</text>
+      <text style="color:#999999;">{{item.uploadTime}}</text>
+    </view>
+  </view>
+  <text class="iconfont icon-btn_robot_arrowcircleright log-container-icon" bind:tap="openLog"></text>
+</view>
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  closeable
+  round
+  custom-style="height: 80%;padding:32rpx;margin-bottom:100rpx;"
+  bind:close="onClose"
+>
+  <view class="log-popup-title">日志详情</view>
+  <view wx:if="{{logList.length}}">
+    <log-item wx:for="{{logList}}" wx:key="{{item.id}}" log="{{item}}"></log-item>
+  </view>
+  <view wx:else class="log-no-data">
+    <image src="../../../../assets/images/noData.png" style="width:520rpx;height:408rpx;margin-bottom: 42rpx;"/>
+    <text>暂无内容</text>
+  </view>
+</van-popup>

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "设备详情",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

@@ -1,0 +1,19 @@
+<!--pages/task/components/taskDelete/taskDelete.wxml-->
+<van-dialog
+  use-slot
+  show="{{ show }}"
+  show-confirm-button="{{false}}"
+>
+  <view class="dialog-title">{{isEdit?'编辑':'新增'}}单位</view>
+  <van-field
+    label="单位名称"
+    model:value="{{ value }}"
+    placeholder="请输入"
+    border="{{ false }}"
+    custom-style="margin:10rpx 0;"
+  />
+    <view class="btns">
+      <van-button custom-class="btn" plain bind:tap="closeDialog">取消</van-button>
+      <van-button custom-class="btn" bind:tap="onSubmit" color="#14A097">确认</van-button>
+    </view>
+</van-dialog>

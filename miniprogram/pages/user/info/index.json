@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "用户详情",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

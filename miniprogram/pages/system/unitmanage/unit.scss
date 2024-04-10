@@ -1,0 +1,133 @@
+/* pages/system/unitmanage/unit.wxss */
+.container {
+  .top-button {
+    display: flex;
+    .add-button {
+      width: 210rpx;
+      height: 64rpx;
+      border-radius: 10rpx;
+      font-size: 23rpx;
+      margin-right: 30rpx;
+    }
+
+    .addSubstation-button {
+      // display: flex;
+      // align-items: center;
+      width: 230rpx;
+      height: 64rpx;
+      border-radius: 10rpx;
+      font-size: 23rpx;
+      margin-right: 30rpx;
+    }
+
+    .edit-button {
+      width: 210rpx;
+      height: 64rpx;
+      border-radius: 10rpx;
+      font-size: 24rpx;
+    }
+  }
+
+  .device-list {
+    background-color: #ffffff;
+    margin-top: 20rpx;
+    border-radius: 8rpx;
+    padding: 24rpx;
+    padding-bottom: 0;
+    .device-info-collapse{
+      .device-info-collapse-title{
+        height: 96rpx;
+        border-bottom: 2rpx solid #EAEAEA;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .device-info-collapse-no{
+          color: #333333;
+        }
+        .device-info-collapse-name{
+          color: #666666;
+        }
+        .device-info-collapse-icon{
+          color: #333333;
+        }
+        .device-info-collapse-icon-open{
+          color: #333333;
+          transform: rotate(90edg);
+        }
+      }
+    }
+  }
+
+  .my-unit-class {
+    border-radius: 12rpx;
+    width: 85%;
+
+    .cancel-button {
+      width: 250rpx;
+      background-color: #fff;
+      border: 1rpx solid #CCCCCC;
+      font-size: 30rpx;
+    }
+
+    .submit-button {
+      width: 250rpx;
+      background-color: #14A097;
+      border: 1rpx solid #14A097;
+      color: #fff;
+      font-size: 30rpx;
+    }
+
+    // 标题样式
+    .van-dialog__header {
+      padding: 20rpx 0;
+      background-color: rgb(220 246 246);
+    }
+
+    // 隐藏了默认按钮
+    .van-hairline--top.van-dialog__footer {
+      display: none;
+    }
+  }
+
+  .my-substation-class {
+    border-radius: 12rpx;
+    width: 85%;
+    overflow: visible;
+    .my-select {
+      margin-left: 15rpx;
+      height: 49rpx;
+      width: 400rpx;
+      font-size: 50rpx;
+
+    }
+    .select-content{
+      width: 400rpx;
+    }
+
+    .cancel-button {
+      width: 250rpx;
+      background-color: #fff;
+      border: 1rpx solid #CCCCCC;
+      font-size: 30rpx;
+    }
+
+    .submit-button {
+      width: 250rpx;
+      background-color: #14A097;
+      border: 1rpx solid #14A097;
+      color: #fff;
+      font-size: 30rpx;
+    }
+
+    // 标题样式
+    .van-dialog__header {
+      padding: 20rpx 0;
+      background-color: rgb(220 246 246);
+    }
+
+    // 隐藏了默认按钮
+    .van-hairline--top.van-dialog__footer {
+      display: none;
+    }
+  }
+}

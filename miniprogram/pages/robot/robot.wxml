@@ -1,0 +1,23 @@
+<!--pages/robot/robot.wxml-->
+ <view class="container">
+  <view class="robot-select">
+    <view class="title">{{currentRobot.substationName}}-{{currentRobot.robotName}}</view>
+    <view class="robot-select-icon" bind:tap="change">
+      <text class="iconfont icon-btn_robot_switch"></text>
+      更换
+    </view>
+  </view>
+  <robot-info id="robotInfo" currentRobot="{{currentRobot}}"></robot-info>
+  <robot-control currentRobot="{{currentRobot}}"></robot-control>
+  <!-- 机器人图片 -->
+  <view class="robot-select">
+    <view class="title">机器人图片</view>
+    <view class="robot-select-icon" bind:tap="moreImage">
+      更多图片
+      <text class="iconfont icon-btn_robot_doubleright"></text>
+    </view>
+  </view>
+  <robot-image currentRobot="{{currentRobot}}"></robot-image>
+  <robot-task currentRobot="{{currentRobot}}"></robot-task>
+</view>
+<robot-select wx:if="{{robotSelectShow}}" model:show="{{robotSelectShow}}"></robot-select> 

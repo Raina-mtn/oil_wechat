@@ -1,0 +1,37 @@
+/* pages/system/devicemanage/add-device/add-device.wxss */
+.container {
+  .list-info{
+    .cell-class{
+      color: #333333;
+      font-size: 24rpx;
+    }
+    .value-class{
+      color: #666666;
+      font-size: 24rpx;
+    }
+  }
+  
+  .bottom-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 112rpx;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .delete-button {
+      width: 332rpx;
+      border-radius: 10rpx;
+      background-color: #fff5f4;
+    }
+    .submit-button {
+      width: 332rpx;
+      border-radius: 10rpx;
+      font-size: 28rpx;
+      color: #fff;
+      background-color:#149F97;
+    }
+  }
+}

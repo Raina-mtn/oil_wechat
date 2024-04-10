@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/robot/robot",
+    "pages/robot/task/task",
+    "pages/robot/robotImage/robotImage",
+    "pages/analyse/analyse",
+    "pages/analyse/chromatography/index",
+    "pages/analyse/calParameters/index",
+    "pages/analyse/large/index",
+    "pages/analyse/dataManage/index",
+    "pages/system/system",
+    "pages/user/user",
+    "pages/user/info/index",
+    "pages/system/unitmanage/unit",
+    "pages/system/robotmanage/robot",
+    "pages/analyse/sampleParameters/index",
+    "pages/analyse/setParameters/index",
+    "pages/robot/history/index",
+    "pages/robot/task/taskCreate/index",
+    "pages/system/devicemanage/device",
+    "pages/system/usermanage/user",
+    "pages/system/devicemanage/device-detail/device-detail",
+    "pages/system/devicemanage/add-device/add-device",
+    "pages/system/usermanage/add-user/add-user",
+    "pages/system/usermanage/user-detail/user-detail",
+    "pages/user/changePassword/changePassword",
+    "pages/user/editUser/editUser",
+    "pages/system/unitmanage/addStation/index",
+    "pages/system/robotmanage/addRobot/index"
+  ],
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/robot/robot",
+        "text": "机器人"
+      },
+      {
+        "pagePath": "pages/analyse/analyse",
+        "text": "色谱分析"
+      },
+      {
+        "pagePath": "pages/system/system",
+        "text": "系统配置"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "resolveAlias": {
+    "@http/*": "http/*",
+    "@utils/*": "utils/*",
+    "@pages/*": "pages/*",
+    "@store/*": "store/*",
+    "@enum/*": "enum/*",
+    "@components/*": "components/*",
+    "@assets/*": "assets/*"
+  }
+}

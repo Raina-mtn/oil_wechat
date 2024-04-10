@@ -1,0 +1,94 @@
+<!--pages/system/usermanage/user-detail/user-detail.wxml-->
+<view class="container">
+  <!-- 头像 -->
+  <view class="avatar">
+    <view class="avatar-detail">
+      <image src="/assets/images/user_avatar.png" mode="" />
+      <image src="/assets/images/btn_replaceavatar.png" class="photo" mode="" bind:tap="" />
+    </view>
+  </view>
+  <!-- 中间内容 -->
+  <view class="info">
+    <view class="list-info" style="background-color: #ffffff;padding: 15rpx 20rpx;">
+      <view wx:if="{{idEdit}}">
+        <view class="content">
+          <label>用户姓名</label>
+          <input name="unit" type="text" style='text-align:right' placeholder="请输入" value="{{ form.accountName }}" bindinput="confirmAccountName"/>
+        </view>
+        <view class="content">
+          <label>用户账号</label>
+          <input type="text" style='text-align:right' placeholder="请输入" value="{{ form.username }}" bindinput="confirmUserName" disabled="true" />
+        </view>
+        <view style="border-bottom: 1px solid #EAEAEA;">
+          <van-cell 
+            custom-class="unityouself" 
+            title="所属单位" 
+            is-link 
+            bind:tap="onClickUnit" 
+            value="{{form.organizationName}}" 
+            size="large"
+            border="{{false}}"
+          />
+          <van-popup position="bottom" custom-style="height: 50%;" show="{{showUnit}}">
+            <van-picker 
+              show-toolbar 
+              title="所属部门" 
+              value-key="organizationName"
+              columns="{{ columns }}" 
+              bind:cancel="onClickUnit" 
+              bind:confirm="onConfirmUnit"/>
+          </van-popup>
+        </view>
+        <view>
+          <van-cell 
+            custom-class="unityouself" 
+            title="职务" 
+            is-link 
+            bind:tap="onClickPost" 
+            value="{{form.roleName}}" 
+            size="large"
+            border="{{false}}"
+          />
+          <van-popup position="bottom" custom-style="height: 50%;" show="{{showPost}}">
+            <van-picker 
+              show-toolbar 
+              title="职务" 
+              value-key="roleName"
+              columns="{{ columns }}" 
+              bind:cancel="onClickPost" 
+              bind:confirm="onConfirmPost"/>
+          </van-popup>
+        </view>
+      </view> 
+
+      <view wx:else="{{!idEdit}}">
+        <view style="border-bottom: 1px solid #EAEAEA;">
+          <van-cell custom-class="unityouself" title="用户姓名" size="large" value="{{detailInfo.accountName}}" border="{{ false }}" />
+        </view>
+        <view style="border-bottom: 1px solid #EAEAEA;">
+          <van-cell custom-class="unityouself" title="用户账号" size="large" value="{{detailInfo.username}}" border="{{ false }}" />
+        </view>
+        <view style="border-bottom: 1px solid #EAEAEA;">
+          <van-cell custom-class="unityouself" title="所属单位" size="large" value="{{detailInfo.organizationName}}" border="{{ false }}" />
+        </view> 
+        <view>
+          <van-cell custom-class="unityouself" title="职务" size="large" value="{{detailInfo.roleName}}" border="{{ false }}" />
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="button">
+    <view wx:if="{{idEdit}}">
+      <van-button bind:tap="resetCancel" custom-class="cancel-button" color="#149F97" plain>取消</van-button>
+      <button class="submit-button" form-type="submit" bind:tap="onClickConfirmEdit">确认</button>
+    </view>
+    <view wx:else="{{idEdit}}">
+      <van-button custom-class="delete-button" bind:tap="onClickDelete" color="red" plain>删除</van-button>
+      <button class="reset-button" form-type="submit" bind:tap="onClickResetPassword">重置密码</button>
+      <button class="edit-button" bind:tap="onClickEdit">编辑</button>
+    </view>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

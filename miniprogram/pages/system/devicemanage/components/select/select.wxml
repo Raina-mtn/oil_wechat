@@ -1,0 +1,30 @@
+<!--pages/system/devicemanage/components/select.wxml-->
+
+  <view class="select_all_view" >
+    <view class="select_view custom-class">
+      <!-- 输入框 -->
+      <view class="inputPlaceholder" bindtap="startChange"  >
+        <text class="text" wx:if='{{select}}'>{{select}}</text>
+        <text class="text placeholder" wx:else="{{select}}">{{placeholder}}</text>
+        <view class="icon" wx:if='{{changable}}'>
+          <van-icon name="arrow-down" />
+        </view> 
+        <view class="icon" wx:else='{{changable}}'>
+          <van-icon name="arrow" />
+        </view>
+      </view>
+      <!-- 下拉展开后的可选择内容 -->
+      <view class="content content-class" wx:if='{{changable}}'>
+          <view 
+            hover-class="select-hover"
+            class="{{item.id==selectId ? 'active':'normal'}}" 
+            wx:for="{{selectcontent}}" 
+            wx:key="index" 
+            bindtap="changecontent" 
+            data-datavalue="{{item}}"
+          >
+            {{item.name}}
+          </view>
+      </view>
+    </view>
+  </view>

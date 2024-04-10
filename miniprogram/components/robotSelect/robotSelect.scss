@@ -1,0 +1,33 @@
+/* components/robotSelect/robotSelect.wxss */
+.btns{
+  display: flex;
+  justify-content: space-between;
+  .btns-item{
+    color:#149F97;
+    font-size: 28rpx;
+  }
+}
+.dec{
+  margin: 30rpx 0;
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.robot-item{
+  height: 80rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #EAEAEA ;
+  font-size: 24rpx;
+  .robot-item-tag{
+    width: 120rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    display: flex;
+    justify-content: center;
+    border-radius: 4rpx;
+  }
+}

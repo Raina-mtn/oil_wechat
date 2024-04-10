@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "ec-canvas": "/components/ec-canvas/ec-canvas",
+    "van-button": "@vant/weapp/button/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "谱图分析",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6",
+  "pageOrientation": "landscape"
+}

@@ -1,0 +1,47 @@
+/* pages/user/info/index.wxss */
+.user-info-container{
+  .user-info-avater{
+    height: 320rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .user-info-avater-upload{
+      width: 196rpx;
+      height: 196rpx;
+      border-radius: 50%;
+      background-color: #eaeaec;
+    }
+    .user-info-avater-icon{
+      width: 48rpx;
+      height: 48rpx;
+      position: absolute;
+      bottom: 60rpx;
+      right: 300rpx;
+    }
+  }
+  .user-info-panel{
+    padding:32rpx;
+    border-radius: 8rpx;
+    .user-panel-item{
+      height: 96rpx;
+    }
+  }
+  .btns{
+    padding: 32rpx 0 ;
+    height: 112rpx;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .btn{
+      width:208rpx;
+      height:72rpx;
+      font-size:24rpx;
+      border-radius: 8rpx;
+    }
+  }
+}

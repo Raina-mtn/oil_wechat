@@ -1,0 +1,59 @@
+<!--pages/system/devicemanage/device.wxml-->
+<view class="container">
+<!-- 选择框 -->
+  <view class="form-container">
+    <view class="form-item">
+      <picker bindchange="onConfirmUnit" range-key="robotName" range="{{columns}}">
+        <view wx:if="{{unitName}}">
+          <text>{{unitName}}</text>
+          <van-icon name="cross" data-propvalue="unitValue" data-proplable="unitName" catch:tap="clearPicker" />
+        </view>
+        <view wx:else>
+          <text>所属工作站</text>
+          <text class="iconfont icon-btn_unfold"></text>
+        </view>
+      </picker>
+    </view>
+    <view class="form-item" style="margin-left:32rpx;">
+      <picker bindchange="onConfirmDevice" range="{{columnsDevice}}">
+        <view wx:if="{{deviceValue}}">
+          <text>{{deviceValue}}</text>
+          <van-icon name="cross" data-propvalue="deviceValue" data-proplable="deviceValue" catch:tap="clearPicker" />
+        </view>
+        <view wx:else>
+          <text>设备类型</text>
+          <text class="iconfont icon-btn_unfold"></text>
+        </view>
+      </picker>
+    </view>
+  </view>
+<!-- 信息展示 -->
+  <view class="bottom-list">
+    <view 
+      wx:for="{{tableList}}"
+      wx:key="index"
+      wx:for-item="table"
+      bind:tap="onJumpDetail"
+      data-item="{{table}}"
+    >
+      <view class="list-container" >
+        <view class="list-top">
+          <text class="iconfont icon-ic_device" style="color: #52b1ab;"></text>
+          <text>{{table.deviceName}}</text>
+          <text style="position: absolute;right: 15rpx;color:#666666 ;">设备ID号{{table.deviceId}}</text>
+        </view>
+        <view class="list-body">
+          <view class="list-info">
+            <label for="">设备型号：{{table.no || ""}}</label>
+            <label for="">设备类型：{{table.type || ''}}</label>
+            <label for="">设备相别：{{table.phase}}</label>
+          </view>   
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 新增按钮 -->
+  <view class="add-button" bind:tap="onClickAdd">
+    <text class="iconfont icon-btn_add" style="font-size:100rpx;color: #52b1ab;"></text>
+  </view>
+</view>

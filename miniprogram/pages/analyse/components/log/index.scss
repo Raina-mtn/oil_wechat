@@ -1,0 +1,56 @@
+/* pages/analyse/components/log/log.wxss */
+.log-container{
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background-color: rgba(204, 255, 252, 0.40);
+  .log-container-img{
+    width: 52rpx;
+    height: 52rpx;
+  }
+  .log-container-divider{
+    width: 2rpx;
+    height: 48rpx;
+    background-color: #CCCCCC;
+    margin: 0 20rpx;
+  }
+  .log-container-info{
+    display: flex;
+    flex-direction: column;
+    .log-container-info-item{
+      color: #333333;
+      font-size: 20rpx;
+      display: flex;
+      align-items: center;
+      .log-container-info-cycle{
+        width: 12rpx;
+        height: 12rpx;
+        border-radius: 100%;
+        margin-right: 8rpx;
+      }
+    }
+  }
+  .log-container-icon{
+    color: #149F97;
+    font-size: 40rpx;
+    position: absolute;
+    right:12rpx ;
+  }
+}
+.log-popup-title{
+  text-align: center;
+  color: #149F97;
+  margin-bottom: 28rpx;
+}
+
+
+.log-no-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+  font-size: 24rpx;
+  margin-top: 218rpx;
+}

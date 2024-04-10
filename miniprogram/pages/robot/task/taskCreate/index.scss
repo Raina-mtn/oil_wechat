@@ -1,0 +1,33 @@
+/* pages/robot/task/components/taskCreate/index.wxss */
+.task-create{
+  background-color: #fff;
+  border-radius: 8rpx;
+  .task-create-title{
+    color:#333333;
+    font-size: 28rpx;
+  }
+  .task-point-container{
+    padding: 32rpx;
+    .task-point{
+      background-color: #F5F9FA;
+      margin-top: 16rpx;
+      padding: 24rpx;
+    }
+  }
+}
+.task-create-btns{
+  height: 112rpx;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .btn{
+    width:332rpx;
+    height:72rpx;
+    font-size:24rpx;
+    border-radius: 8rpx;
+  }
+}

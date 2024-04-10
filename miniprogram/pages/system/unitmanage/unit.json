@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "add-unit":"./addUnit/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "单位管理",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

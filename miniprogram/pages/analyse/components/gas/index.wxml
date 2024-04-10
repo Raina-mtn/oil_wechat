@@ -1,0 +1,20 @@
+<!--pages/analyse/components/gas/index.wxml-->
+<view class="gas-container">
+  <view class="gas-item-large">
+    <view class="gas-label">载气流量</view>
+    <view class="gas-image">
+      <image class="gas-image-out" src="./image/gas.png" mode=""/>
+      <image class="gas-image-data" src="./image/gas-data.png" style="height: {{((list.fzaiQi/100)*160)}}rpx;"/>
+    </view>
+    <text class="gas-data">{{list.fzaiQi}}</text>
+    <text class="gas-unit">ml/min</text>
+  </view>
+  <view class="gas-item-container">
+    <view wx:for="{{gasList}}" wx:key="index" class="gas-item">
+      <view class="gas-label">{{item.label}}</view>
+      <view class="iconfont {{item.icon}} gas-icon" style="color:{{item.color}}"></view>
+      <view class="gas-data">{{list[item.key]||'0'}}</view>
+      <view class="gas-unit">{{item.unit}}</view>
+    </view>
+  </view>
+</view>

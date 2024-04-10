@@ -1,0 +1,10 @@
+<!--pages/large/large.wxml-->
+<view class="large-container">
+  <view style="position: relative;">
+    <van-button color="#149F97" plain size="small" bind:click="exitLarge" style="position: absolute;right: 0;">
+      <text class="iconfont icon-btn_ic_exitfullscreen_default"></text>
+      退出全屏
+    </van-button>
+  </view>
+  <ec-canvas id="mychart-larges" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>

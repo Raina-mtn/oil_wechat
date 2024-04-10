@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "chart": "./components/chart"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "谱图分析",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

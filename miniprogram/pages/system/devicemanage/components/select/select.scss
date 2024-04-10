@@ -1,0 +1,95 @@
+/* pages/system/devicemanage/components/select.wxss */
+.select_all_view {
+  z-index: 2011;
+  opacity: 1;
+  // align-self: stretch;
+
+  // height: auto;
+  // width: auto;
+  .select_view
+   {
+
+    //   display: inline;
+    //   /* width: 200rpx;
+    //   height: 64rpx; */
+    .inputPlaceholder {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      min-width: 200rpx;
+      border: 1rpx solid #CCCCCC;
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 31rpx;
+      line-height: 38rpx;
+
+      .text {
+        height: 40rpx;
+        position: relative;
+        left: 10rpx;
+      }
+
+      .text.placeholder {
+        color: #666666;
+      }
+
+      .icon {
+        position: absolute;
+        color: rgb(160 160 160);
+        right: 10rpx;
+      }
+    }
+
+    .content {
+      position: absolute;
+      z-index: 2011;
+      max-width: 600rpx;
+      max-height: 400rpx;
+      background: #FFFFFF;
+      box-shadow: 0rpx 12rpx 32rpx 0rpx rgba(0, 0, 0, 0.08), 0rpx 6rpx 12rpx -8rpx rgba(0, 0, 0, 0.12), 0rpx 18rpx 56rpx 16rpx rgba(0, 0, 0, 0.05);
+      border-radius: 10rpx 10rpx 10rpx 10rpx;
+      opacity: 1;
+      margin-top: 5rpx;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+
+      .normal {
+        width: auto;
+        height: 50rpx;
+        opacity: 1;
+        font-size: 25rpx;
+        color: #000000;
+        line-height: 38rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .active {
+        width: auto;
+        height: 50rpx;
+        background: #ffffff;
+        font-size: 25rpx;
+        font-family: PingFang SC-Regular, PingFang SC;
+        font-weight: 600;
+        color: #149F97;
+        line-height: 38rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      // .select-hover {
+      //   color: #212525;
+      //   background-color: #a72929;
+      // }
+    }
+
+  }
+
+}

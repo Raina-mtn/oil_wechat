@@ -1,0 +1,51 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <image class="login-bg" mode="aspectFill" src="../../assets/images/login-bg.png"/>
+  <view class="login-container">
+    <view>
+      <view class="login-title">Hello！</view>
+      <view class="login-title">欢迎使用色谱工作站</view>
+    </view>
+    <view class="login-form">
+      <van-cell-group>
+        <!-- <van-field
+          model:value="{{ username }}"
+          placeholder="请输入手机号码"
+          border="{{ true }}"
+          extra-event-params="{{true}}"
+          error-message="{{phoneMessage}}"
+          custom-style="margin-bottom:80rpx;border-bottom:1rpx solid #6666664D;font-size:32rpx;"
+          bind:blur="phoneChange"
+        /> -->
+        <van-field
+          model:value="{{ username }}"
+          placeholder="请输入手机号码"
+          border="{{ true }}"
+          custom-style="margin-bottom:80rpx;border-bottom:1rpx solid #6666664D;font-size:32rpx;"
+        />
+        <!-- <van-field
+          model:value="{{ password }}"
+          placeholder="请输入密码"
+          border="{{ true }}"
+          extra-event-params="{{true}}"
+          password="{{true}}"
+          error-message="{{passwordMessage}}"
+          custom-style="margin-bottom:44rpx;border-bottom:1rpx solid #6666664D;font-size:32rpx;"
+          bind:blur="passwordChange"
+        /> -->
+        <van-field
+          model:value="{{ password }}"
+          placeholder="请输入密码"
+          border="{{ true }}"
+          password="{{true}}"
+          custom-style="margin-bottom:44rpx;border-bottom:1rpx solid #6666664D;font-size:32rpx;"
+        />
+      </van-cell-group>
+    </view>
+    <view class="login-link">
+      <text>登录遇到问题？</text>
+      <text>忘记密码</text>
+    </view>
+    <van-button color="#14A097" custom-style="width:100%;font-size:48rpx;" bind:click="submit">登  录</van-button>
+  </view>
+</view>

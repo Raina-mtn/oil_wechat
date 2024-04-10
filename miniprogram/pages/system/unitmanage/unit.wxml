@@ -1,0 +1,57 @@
+<!--pages/system/unitmanage/unit.wxml-->
+<view class="container">
+  <view class="top-button">
+    <van-button bind:click="addUnit" custom-class="add-button" color="#149F97" data-type="add">
+      <text class="iconfont icon-btn_ic_add_default"></text>
+      新增单位
+    </van-button>
+    <van-button bind:click="addSubstation" custom-class="addSubstation-button" color="#149F97" data-type="add">
+      <view style="display: flex;align-items: center;">
+        <image src="/assets/images/btn_addSubstation.png" style="height: 38rpx;width: 38rpx;" />
+        <text style="margin-left: 10rpx;">新增变电站</text>
+      </view>
+    </van-button>
+    <van-button bind:click="onEdit" custom-class="edit-button" color="#17B5AC" plain>
+      <text class="iconfont icon-btn_ic_edit_default"></text>
+      编辑
+    </van-button>
+  </view>
+  <!-- 信息展示 -->
+  <view class="device-list">
+    <view class="device-info" wx:for="{{listData}}" wx:key="index">
+      <view class="device-info-collapse">
+        <!-- 单位 -->
+        <view class="device-info-collapse-title" 
+          data-item="{{item}}" 
+          data-type="unit" 
+          bind:tap="setCheck" 
+          style="{{currentType==='unit'&&currentCheckItem.realId===item.realId?'background-color: rgba(43, 168, 161, 0.06);':''}}"
+        >
+          <text class="device-info-collapse-no">NO.{{item.realId}}</text>
+          <view class="device-info-collapse-name" data-index="{{index}}" bind:tap="setCurrent">
+            <text>{{item.name}}</text>
+            <text class="iconfont icon-btn_forward {{current===index?'icon-btn_drop-down':''}} device-info-collapse-icon" name="arrow" />
+          </view>
+        </view>
+        <!-- 变电站 -->
+        <view wx:if="{{current===index}}">
+          <view 
+            wx:for-item="itemName" 
+            wx:for-index="idx" 
+            wx:for="{{item.children}}" 
+            wx:key="idx" 
+            class="device-info-collapse-title" 
+            data-item="{{itemName}}"
+            data-type="station" 
+            bind:tap="setCheck" 
+            style="{{currentType==='station'&&currentCheckItem.realId===itemName.realId?'background-color: rgba(43, 168, 161, 0.06);':''}}"
+          >
+            <text class="device-info-collapse-no">变电站</text>
+            <text class="device-info-collapse-name">{{itemName.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<add-unit id="add-unit" bind:getList="getList"></add-unit>

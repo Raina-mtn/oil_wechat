@@ -1,0 +1,68 @@
+/* pages/task/components/cycleDialog/cycleDialog.wxss */
+.dialog-container{
+  color: #333333;
+  padding: 40rpx 20rpx;
+  font-size: 24rpx;
+  .currenItem{
+    line-height: 40rpx;
+  }
+  .taskInfo{
+    color: #666666;
+    .taskName{
+      color: #000000;
+      font-weight: bold;
+      line-height: 48rpx;
+    }
+  }
+  .cycle-time{
+    height: 80rpx;
+    border: 2rpx solid #CCCCCC;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #999999;
+    margin: 18rpx 0;
+  }
+  .cycle-interval{
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
+    margin: 30rpx 0;
+    .cycle-interval-item{
+      height: 80rpx;
+      display: flex;
+      align-items: center;
+      color: #333333;
+      .cycle-custom-class{
+        padding: 0;
+        margin-right: 8rpx;
+      }
+      .cycle-field-class{
+        border: 2rpx solid #CCCCCC;
+        border-radius: 4rpx;
+        text-align: center;
+        width: 124rpx;
+        height: 80rpx;
+      }
+    }
+  }
+  .dialog-divider{
+    margin: 30rpx 0 ;
+  }
+  .btns{
+    margin: 48rpx 0 ;
+    position: fixed;
+    height: 112rpx;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    .btn{
+      width: 264rpx;
+      height: 80rpx;
+      font-size:24rpx;
+      border-radius: 8rpx;
+    }
+  }
+}

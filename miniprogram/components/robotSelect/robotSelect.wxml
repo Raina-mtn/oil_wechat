@@ -1,0 +1,26 @@
+<!--components/robotSelect/robotSelect.wxml-->
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  round="{{true}}"
+  custom-style="height: 40%;padding:34rpx 56rpx;margin-bottom:150rpx;"
+  bind:close="cancle"
+>
+  <view class="btns">
+    <text class="btns-item" bind:tap="cancle">取消</text>
+    <text class="btns-item" bind:tap="submit">确定</text>
+  </view>
+  <view class="dec">请选择机器人</view>
+  <view 
+    class="robot-item" 
+    wx:for="{{robotList}}" 
+    wx:key="{{index}}" 
+    style="{{current.robotId===item.robotId?'background-color: rgba(43, 168, 161, 0.06);':''}}" 
+    data-item="{{item}}" 
+    bind:tap="check"
+  >
+    <text class="van-cell-text">{{item.substationName}}</text>
+    <text class="van-cell-text">{{item.robotName}}</text>
+    <van-tag custom-class="robot-item-tag" color="{{item.status===2?'#EAF9FF':'#FFFFFF'}}" text-color="{{item.robotState===2?'#1890FF':'#AFAFAF'}}" plain>{{robotStateObj[item.robotState]}}</van-tag>
+  </view>
+</van-popup>

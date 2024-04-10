@@ -1,0 +1,89 @@
+/* pages/system/usermanage/add-user/add-user.wxss */
+.container {
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // height: 250rpx;
+    .avatar-detail {
+      position: relative;
+
+      image {
+        height: 200rpx;
+        width: 200rpx;
+        border-radius: 50%;
+      }
+
+      .photo {
+        position: absolute;
+        right: 10rpx;
+        bottom: 10rpx;
+        height: 50rpx;
+        width: 50rpx;
+      }
+    }
+
+    .upload-avatar {
+      background-color: #18BFB6;
+    }
+  }
+
+  .info {
+    margin-top: 40rpx;
+    .list-info {
+      .unityouself{
+        padding: 20rpx 0;
+      }
+      .content {
+        height: 90rpx;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1rpx solid #EAEAEA;
+        padding: 20rpx 0;
+      }
+      .content:nth-last-of-type(1) {
+        border-bottom: none;
+      }
+      .my-select {
+        .select_all_view .select_view .inputPlaceholder {
+          border: none !important
+        }
+      }
+    }
+
+  }
+  .button{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 180rpx;
+    width: 100%;
+    background-color: #ffffff;
+
+    
+    .delete-button {
+      position: absolute;
+      top: 30rpx;
+      left: 50rpx;
+      width: 40%;
+      border-radius: 10rpx;
+      background-color: #f3fafa;
+      height: 82rpx;
+      line-height: 81rpx;
+      font-size: 28rpx;
+    }
+    .submit-button {
+      position: absolute;
+      top: 30rpx;
+      right: 50rpx;
+      width: 40%;
+      height: 82rpx;
+      line-height: 81rpx;
+      border-radius: 10rpx;
+      font-size: 28rpx;
+      color: #fff;
+      background-color:#149F97;
+    }
+  }
+}

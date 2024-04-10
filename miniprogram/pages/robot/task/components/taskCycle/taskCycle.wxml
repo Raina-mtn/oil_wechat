@@ -1,0 +1,19 @@
+<!--pages/task/components/taskCollect/taskCollect.wxml-->
+<wxs module="filter" src="./util.wxs"></wxs>
+<view class="task-list-container">
+  <van-search model:value="{{ searchParams }}" placeholder="输入任务名称查询" clear-trigger="focus" clear-icon="clear" />
+  <!-- 任务列表 -->
+  <view class="task-list">
+    <task-item wx:for="{{searchList}}" wx:key="index" checkIndex="{{checkIndex}}" index="{{index}}" data-index="{{index}}" data-item="{{item}}" title="{{item.cycleTaskName}}" bind:tap="check">
+      <view>点位数量：{{filter.deviceNum(item.deviceIds)}}</view>
+      <view>任务时间间隔（分钟）：{{item.interval}}</view>
+      <view>任务开始时间：{{item.startTime}}</view>
+      <view>任务结束时间：{{item.endTime}}</view>
+      <view>下次出发时间：{{item.nextIssueTime}}</view>
+    </task-item>
+  </view>
+  <view class="btns">
+    <van-button plain color="#FA3320" custom-class="btn" bind:tap="cancleCycle">取消周期任务</van-button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />

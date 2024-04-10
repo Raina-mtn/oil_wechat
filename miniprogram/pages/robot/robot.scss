@@ -1,0 +1,12 @@
+/* pages/robot/robot.wxss */
+.container{
+  height: auto;
+  // 更换机器人
+  .robot-select{
+    display: flex;
+    justify-content: space-between;
+    .robot-select-icon{
+      color: #149F97;
+    }
+  }
+}

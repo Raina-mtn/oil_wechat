@@ -1,0 +1,23 @@
+/* pages/task/components/taskCollect/taskCollect.wxss */
+.task-list-container{
+  .task-list{
+    margin-bottom: 140rpx;
+  }
+  .btns{
+    padding: 32rpx 0 ;
+    height: 112rpx;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .btn{
+      width: 686rpx;
+      height: 72rpx;
+      border-radius: 8rpx;
+      background-color: rgba(250, 51, 32, 0.05);
+    }
+  }
+}

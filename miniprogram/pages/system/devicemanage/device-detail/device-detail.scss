@@ -1,0 +1,55 @@
+/* pages/system/devicemanage/device-detail/device-detail.wxss */
+.container {
+  .device-detail {
+    padding: 32rpx 24rpx;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    position: relative;
+    .detail-title {
+      display: flex;
+      align-items: center;
+      margin: 10rpx 0 20rpx 0;
+    }
+
+    .detail-list {
+      .list-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #EAEAEA;
+        height: 80rpx;
+        font-size: 24rpx;
+        .list-key {
+          margin-bottom: 20rpx;
+        }
+        .list-value {
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  .bottom-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 112rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+
+    .delete-button {
+      width: 332rpx;
+      border-radius: 10rpx;
+      background-color: #fff5f4;
+    }
+
+    .download-button {
+      width: 332rpx;
+      border-radius: 10rpx;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!--pages/chromatography/chromatography.wxml-->
+<view class="container">
+  <view class="analyse-btns">
+    <van-button plain color="#149F97" custom-class="analyse-btn" bind:tap="goDataManage">
+      <text class="iconfont icon-btn_ic_library_default analyse-btn-icon"></text>
+      选择数据
+    </van-button>
+  </view>
+  <view wx:if="{{!!chartData.length}}" class="analyse-chart" wx:for="{{chartData}}">
+    <view class="analyse-title">
+      <view class="title">采集通道{{index+1}}</view>
+      <view class="analyse-large" data-chart="{{item}}" bind:tap="large">
+        放大
+        <text class="iconfont icon-btn_ic_expand"></text>
+      </view>
+    </view>
+    <view class="analyse-info">{{item.yUnit}} {{item.xUnit}}</view>
+    <view class="analyse-chart">
+      <chart chartId="{{index}}" chartData="{{item}}"></chart>
+    </view>
+  </view>
+  <view wx:if="{{!chartData.length}}" class="analyse-no-data">
+    <image src="../../../assets/images/noData.png" style="width:520rpx;height:408rpx;margin-bottom: 42rpx;"/>
+    <text>暂无内容</text>
+  </view>
+</view>

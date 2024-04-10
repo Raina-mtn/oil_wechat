@@ -1,0 +1,63 @@
+<!--pages/robot/components/robotControl/robotControl.wxml-->
+<view class="robotControl">
+  <view wx:if="{{isCollapse}}" class="robotControl-title">
+    <view>机器人操作按钮</view>
+    <view class="robotControl-icon" bind:tap="change">
+      <text style="margin-right: 8rpx;">展开</text>
+      <text class="iconfont icon-btn_unfold"></text>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="robotControl-title">
+      <view>机器人操作按钮</view>
+      <view class="robotControl-icon" bind:tap="change">
+        <text style="margin-right: 8rpx;">收起</text>
+        <text class="iconfont icon-btn_fold"></text>
+      </view>
+    </view>
+    <view class="robotControl-btns">
+      <view class="robotControl-btns-group">
+        <van-button custom-class="info robotControl-btn" custom-style="padding:0;" plain color="#149F97" bind:click="controlRobotShell">
+          <text class="iconfont icon-btn_ic_open_highlight" style="color:#149F97;margin-right: 8rpx;" />
+          {{robotShell?'关闭':'打开'}}机器人罩壳
+        </van-button>
+        <van-button custom-class="info robotControl-btn" plain color="#149F97" bind:click="terminateTask">
+          <text class="iconfont icon-btn_ic_terminate_default" style="color:#149F97;margin-right: 8rpx;" />
+          一键终止
+        </van-button>
+        <van-button disabled="{{!isLight}}" custom-class="info robotControl-btn" plain color="#149F97" bind:tap="plusLight">
+          <van-icon name="plus" />
+          补光灯亮度
+        </van-button>
+      </view>
+      <view class="robotControl-btns-group">
+        <van-button custom-class="info robotControl-btn" custom-style="padding:0;" plain color="#149F97" bind:click="controlPileShell">
+          <text class="iconfont icon-btn_ic_open_highlight" style="color:#149F97;margin-right: 8rpx;" />
+          {{pileShell?'关闭':'打开'}}取油桩罩壳
+        </van-button>
+        <van-button custom-class="info robotControl-btn" plain color="#149F97" bind:click="charge">
+          <text class="iconfont icon-btn_ic_charge_default" style="color:#149F97;margin-right: 8rpx;" />
+          一键充电
+        </van-button>
+        <van-button disabled="{{!isLight}}" custom-class="info robotControl-btn" plain color="#149F97" bind:tap="minusLight">
+          <van-icon name="minus" />
+          补光灯亮度
+        </van-button>
+      </view>
+      <view class="robotControl-btns-group">
+          <van-button custom-class="info" custom-style="height:102rpx;border-radius:8rpx;" plain color="#149F97" bind:click="setLock">
+            <text class="iconfont icon-btn_ic_unblanking_default" style="color:#149F97;margin-right: 8rpx;" />
+            {{ isLock?'关闭':'打开' }}自锁
+          </van-button>
+          <van-button wx:if="{{isLight}}" custom-class="info" custom-style="height:102rpx;border-radius:8rpx;" plain color="#149F97" bind:click="setLight">
+            <image src="../../../../assets/images/btn_ic_blanking.png" style="width:32rpx;height:32rpx;margin-right: 8rpx;" mode="aspectFill"/>
+            关闭补光灯
+          </van-button>
+          <van-button wx:else custom-class="info" custom-style="height:102rpx;" plain color="#149F97" bind:click="setLight">
+            <image src="../../../../assets/images/btn_ic_unblanking.png" style="width:32rpx;height:32rpx;margin-right: 8rpx;" mode="aspectFill"/>
+            打开补光灯
+          </van-button>
+      </view>
+    </view>
+  </view>
+</view>

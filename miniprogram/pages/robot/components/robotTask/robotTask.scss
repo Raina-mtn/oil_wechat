@@ -1,0 +1,17 @@
+/* pages/robot/components/robotTask/robotTask.wxss */
+.robot-task{
+  height: 100rpx;
+  margin-top: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  .robot-task-btn{
+    height: 100rpx;
+    width: 332rpx;
+    background-color: #FFFFFF;
+    border-radius: 8rpx;
+    padding: 26rpx 32rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

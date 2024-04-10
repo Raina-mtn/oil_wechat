@@ -1,0 +1,25 @@
+<!--pages/system/robotmanage/robot.wxml-->
+<view class="container">
+  <view class="top-button">
+    <van-button bind:click="addRobot" data-type="add" custom-class="add-button" color="#149F97">
+      <text class="iconfont icon-btn_ic_add_default"></text>
+      新增机器人
+    </van-button>
+    <van-button bind:click="addRobot" data-type="edit" custom-class="edit-button" color="#17B5AC" plain>
+      <text class="iconfont icon-btn_ic_edit_default"></text>
+      编辑
+    </van-button>
+  </view>
+  <view class="robot-list">
+    <view class="robot-info" style="{{currentCheck.robotId===item.robotId?'background-color: rgba(43, 168, 161, 0.06);':''}}" wx:for="{{listData}}" wx:key="index" data-item="{{item}}" bind:tap="check">
+      <view class="info-container">
+        <view>
+          <text class="robotName">{{item.substationName}}#{{item.robotName}}</text>
+          <text class="robotId" style="font-size: small;display: block;">SN.{{item.robotId}}</text>
+        </view> 
+        <text>{{item.workstationName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<van-toast id="van-toast" />

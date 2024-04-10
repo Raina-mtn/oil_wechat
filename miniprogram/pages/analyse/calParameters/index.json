@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "parameter-item":"./components/parametersItem/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "计算参数",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

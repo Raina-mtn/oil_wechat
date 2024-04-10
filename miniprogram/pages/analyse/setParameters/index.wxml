@@ -1,0 +1,22 @@
+<!--pages/analyse/setParameters/index.wxml-->
+<view class="container">
+  <view class="temperature">
+    <view class="title temperature-title">设置温度</view>
+    <van-cell wx:for="{{temporaryList}}" title="{{item.label}}（℃）" custom-class="temperature-cell">
+      <van-stepper value="{{temporaryData[item.key]}}" min="0" input-class="stepper-input"data-key="{{item.key}}" bind:change="temporaryChange"/>
+    </van-cell>
+  </view>
+  <view class="bridge">
+    <view class="title temperature-title">设置桥流</view>
+    <van-cell title="桥流（mA）" custom-class="temperature-cell">
+      <van-stepper integer input-class="stepper-input" value="{{bridgeData.tcdValue}}" data-key="tcdValue" bind:change="bridgeChange" />
+    </van-cell>
+    <van-cell title="桥流（mA）" custom-class="temperature-cell">
+      <van-switch checked="{{ bridgeData.bTcd }}" active-color="#149F97" data-key="bTcd" inactive-color="#C5C5C5" size="24" bind:change="bridgeChange" />
+    </van-cell>
+  </view>
+</view>
+<view class="parameters-btns">
+  <van-button custom-class="btn" plain bind:tap="cancel">取消</van-button>
+  <van-button custom-class="btn" color="#14A097" bind:tap="submit">确认</van-button>
+</view>

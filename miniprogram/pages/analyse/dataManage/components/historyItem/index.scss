@@ -1,0 +1,29 @@
+/* pages/task/components/taskItem/taskItem.wxss */
+.task-item{
+  padding:16rpx 0 16rpx 24rpx;
+  margin: 24rpx 0;
+  background-color: #FFFFFF;
+  position: relative;
+  .task-item-check{
+    width: 84rpx;
+    height: 84rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .task-item-title{
+    display: flex;
+    align-items: center;
+    color: #333333;
+    font-size: 28rpx;
+    height: 48rpx;
+    .task-item-icon{
+      margin-right: 12rpx;
+    }
+  }
+  .task-item-container{
+    color: #666666;
+    font-size: 24rpx;
+    line-height: 48rpx;
+  }
+}

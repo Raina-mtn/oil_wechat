@@ -1,0 +1,26 @@
+<!--pages/system/devicemanage/device-detail/device-detail.wxml-->
+<view class="container">
+  <view class="device-detail">
+    <view class="detail-title">
+      <text class="iconfont icon-ic_device" style="font-size:39rpx;color: #52b1ab;margin-right: 8rpx;"></text>
+      <text style="font-size:34rpx; font-weight: 500;">{{detail.deviceName}}</text>
+    </view>
+    <view class="detail-list">
+      <view
+        wx:for="{{listMap}}"
+        wx:key="index"
+        wx:for-item="obj"
+      >
+        <view class="list-info">
+          <view class="list-key">{{obj.name}}</view>
+          <view class="list-value">{{detail[obj.key] || ''}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-button">
+    <van-button bind:click="delete" custom-class="delete-button" color="red" plain>删除</van-button>
+    <van-button bind:tap="onEdit" custom-class="download-button" color="#149F97">编辑</van-button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />

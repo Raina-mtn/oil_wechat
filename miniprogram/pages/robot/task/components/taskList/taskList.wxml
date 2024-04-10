@@ -1,0 +1,24 @@
+<!--pages/task/components/taskList/taskList.wxml-->
+<view class="task-list-container">
+  <van-search model:value="{{ searchParams }}" placeholder="输入任务名称查询" clear-trigger="focus" clear-icon="clear" />
+  <!-- 任务列表 -->
+  <view class="task-list">
+    <task-item wx:for="{{searchList}}" wx:key="index" checkIndex="{{checkIndex}}" index="{{index}}" title="{{ item.taskName }}" data-index="{{index}}" data-item="{{item}}" bind:tap="check">
+      <view>点位数量：{{item.deviceIds.length}}</view>
+      <view>编辑时间：{{item.date}}</view>
+    </task-item>
+  </view>
+  <!-- 新增-保存在本地 -->
+  <text class="iconfont icon-btn_add task-list-icon" bind:tap="create"></text>
+  <view class="btns">
+    <van-button plain color="#FA3320" custom-class="btn" bind:tap="delete">删 除</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="execute">立即执行</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="cycle">周期执行</van-button>
+    <van-button color="#149F97" custom-class="btn" bind:tap="collect">收藏任务</van-button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />
+<delete-dialog bind:refresh="refresh" id="delete-dialog"></delete-dialog>
+<execute-dialog bind:refresh="refresh" id="execute-dialog"></execute-dialog>
+<cycle-dialog bind:refresh="refresh" id="cycle-dialog"></cycle-dialog>
+<collect-dialog bind:refresh="refresh" id="collect-dialog"></collect-dialog>

@@ -1,0 +1,67 @@
+<!--pages/analyse/dataManage/components/historyRecord/historyRecord.wxml-->
+<view>
+  <view class="container">
+    <view class="history-form-container">
+      <view class="history-form-item" >
+        <picker bindchange="bindPickerChange" range-key="deviceName" range="{{deviceColumns}}">
+          <view wx:if="{{deviceName}}">
+            <text>{{deviceName}}</text>
+            <van-icon name="cross" data-propvalue="deviceId" data-proplable="deviceName" catch:tap="clearPicker" />
+          </view>
+          <view wx:else>
+            <text>选择设备</text>
+            <text class="iconfont icon-btn_unfold"></text>
+          </view>
+        </picker>
+      </view>
+      <view class="history-form-item" style="width:250rpx;margin-left:32rpx;">
+        <picker mode="date" header-text="选择时间"  value="{{startTime}}" data-type="startTime" bindchange="bindDateChange">
+          <view wx:if="{{startTime}}">
+            <text>{{startTime}}</text>
+            <van-icon name="cross" data-type="startTime" catch:tap="clearDate" />
+          </view>
+          <view wx:else>
+            <text>开始时间</text>
+            <text class="iconfont icon-btn_unfold"></text>
+          </view>
+        </picker>
+      </view>
+      <view class="history-form-item" style="width:250rpx;margin-left:32rpx;">
+        <picker mode="date" header-text="选择时间"  value="{{endTime}}" data-type="endTime" bindchange="bindDateChange">
+          <view wx:if="{{endTime}}">
+            <text>{{endTime}}</text>
+            <van-icon name="cross" data-type="endTime" catch:tap="clearDate" />
+          </view>
+          <view wx:else>
+            <text>结束时间</text>
+            <text class="iconfont icon-btn_unfold"></text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view wx:if="{{list.length}}" class="history-container">
+      <history-item  wx:for="{{list}}" wx:key="index" checkIndex="{{checkIndex}}" index="{{index}}" data-index="{{index}}" bind:tap="check">
+        <view slot="title" class="history-container-title">
+          <text class="iconfont icon-ic_library_file task-item-icon" style="color: #2BA8A0;"></text> 
+            {{item.dateTest}} 
+          <text class="history-container-file">{{item.fileName}}</text>
+        </view>
+        <view class="history-record">
+          <view wx:for="{{columns}}" wx:for-item="column" wx:for-index="columnIndex" class="history-record-item">
+            <text class="history-record-item-title">{{column.label}}：</text>{{item[column.key]}}
+          </view>
+        </view>
+      </history-item>
+    </view>
+    
+    <view wx:else class="fineChart-container">
+      <image src="../../../../../assets/images/noData.png" style="width:520rpx;height:408rpx;margin-bottom: 42rpx;"/>
+      <view>暂无内容</view>
+    </view>
+  </view>
+
+  <view class="btns">
+    <van-button color="#149F97" custom-class="btn" bind:tap="showChart">显示谱图</van-button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />

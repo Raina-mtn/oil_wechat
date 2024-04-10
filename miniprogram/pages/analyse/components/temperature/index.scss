@@ -1,0 +1,39 @@
+/* pages/analyse/components/temperature/temperature.wxss */
+.temperature-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .temperature-bg{
+    width: 686rpx;
+    height: 400rpx;
+    position: absolute;
+    z-index: -1;
+  }
+  .temperature-item{
+    width: 250rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 28rpx 0;
+    .temperature-label{
+      width: 80rpx;
+      height: 80rpx;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666666;
+      background-image: linear-gradient(#F1F1F1,#FFFFFF);
+      box-shadow: 0 0 8rpx 8rpx #F1F1F1;
+
+    }
+    .temperature-data{
+      color:#333333;
+      font-size: 36rpx;
+    }
+    .temperature-setpoint{
+      color:#666666;
+      font-size: 20rpx;
+      margin-top: 8rpx;
+    }
+  }
+}

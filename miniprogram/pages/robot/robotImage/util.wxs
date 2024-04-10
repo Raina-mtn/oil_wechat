@@ -1,0 +1,10 @@
+
+var json = {
+  stringify:function (info){
+    return JSON.stringify(info)
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+	stringify: json.stringify
+}

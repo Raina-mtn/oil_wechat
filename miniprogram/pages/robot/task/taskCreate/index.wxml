@@ -1,0 +1,24 @@
+<!--pages/robot/task/components/taskCreate/index.wxml-->
+<view class="container">
+  <view class="task-create">
+    <van-field
+      label="设备任务"
+      model:value="{{ taskName }}"
+      placeholder="请输入"
+      input-align="right"
+      label-class="task-create-title"
+    />
+    <view class="task-point-container">
+      <view class="task-create-title">任务点位</view>
+      <view class="task-point">
+        <van-checkbox-group value="{{ deviceIds }}" bind:change="pointChange">
+          <van-checkbox wx:for="{{deviceList}}" wx:key="{{item.deviceId}}" name="{{item.deviceId}}" shape="square" checked-color="#14A097" icon-size="16">{{item.deviceName}}</van-checkbox>
+        </van-checkbox-group>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="task-create-btns">
+  <van-button color="#FA3320" plain custom-class="btn" custom-style="background-color:#FA33200D;" bind:click="onCancel">取消</van-button>
+  <van-button color="#149F97" custom-class="btn" bind:click="submit">确认</van-button>
+</view>

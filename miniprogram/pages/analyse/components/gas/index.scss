@@ -1,0 +1,66 @@
+/* pages/analyse/components/gas/index.wxss */
+.gas-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32rpx;
+  .gas-label{
+    color: #666666;
+    font-size: 24rpx;
+    width: 60%;
+  }
+  .gas-icon{
+    color: #666666;
+    font-size: 48rpx;
+  }
+  .gas-data{
+    color: #149F97;
+    font-size: 40rpx;
+    width: 60%;
+  }
+  .gas-unit{
+    color: #666666;
+    font-size: 24rpx;
+  }
+  .gas-image{
+    display: flex;
+    justify-content: center;
+    margin-top: 20rpx;
+    margin-bottom: 12rpx;
+    position: relative;
+    .gas-image-out{
+      height: 180rpx;
+      width: 86rpx;
+    }
+    .gas-image-data{
+      height: 0rpx;
+      width: 8rpx;
+      position: absolute;
+      bottom: 10rpx;
+      right: 65rpx;
+    }
+  }
+  .gas-item-large{
+    width: 226rpx;
+    height: 336rpx;
+    background: #FFFFFF;
+    border: 2rpx solid #EEEEEE;
+    border-radius: 8rpx;
+    padding: 24rpx;
+  }
+  .gas-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(222rpx + 222rpx + 16rpx);
+    .gas-item{
+      width: 222rpx;
+      height: 164rpx;
+      background: #FFFFFF;
+      border: 2rpx solid #EEEEEE;
+      border-radius: 8rpx;
+      padding: 24rpx;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+}

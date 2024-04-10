@@ -1,0 +1,25 @@
+<!--pages/task/components/taskDelete/taskDelete.wxml-->
+<van-dialog
+  use-slot
+  show="{{ show }}"
+  show-confirm-button="{{false}}"
+>
+  <view class="dialog-title">计算方式</view>
+  <view class="dialog-container">
+    <view class="dialog-radio">
+      <text class="dialog-radio-label">计算方式</text>
+      <van-radio-group
+        value="{{ radio }}"
+        bind:change="onChange"
+        direction="horizontal"
+      >
+        <van-radio name="true" checked-color="#14A097">峰高</van-radio>
+        <van-radio name="false" checked-color="#14A097">峰面积</van-radio>
+      </van-radio-group>
+    </view>
+    <view class="btns">
+      <van-button custom-class="btn" plain bind:tap="closeDialog">取消</van-button>
+      <van-button custom-class="btn" color="#14A097" bind:tap="onSubmit">确认</van-button>
+    </view>
+  </view>
+</van-dialog>

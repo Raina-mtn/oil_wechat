@@ -1,0 +1,33 @@
+/* pages/analyse/samplingParameters.wxss */
+.sample-container-item{
+}
+.sample-type{
+  display: flex;
+  justify-content: flex-end;
+  color:#999999;
+  font-size: 28rpx;
+  .sample-icon{
+    font-size: 40rpx;
+    color: #333333;
+  }
+}
+.van-cell-group__title{
+  background-color: #FFFFFF;
+  color: #333333 !important;
+  font-size: 32rpx !important;
+}
+
+.parameters-btns{
+  height: 112rpx;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .btn{
+    width: 264rpx;
+    height: 80rpx;
+  }
+}

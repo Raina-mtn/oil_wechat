@@ -1,0 +1,11 @@
+<!--pages/robot/components/robotTask/robotTask.wxml-->
+<view class="robot-task">
+  <view class="robot-task-btn" bind:tap="goTask">
+    任务下发
+      <text class="iconfont icon-btn_robot_arrowcircleright" style="color:#17B5AC;"></text>
+  </view>
+  <view class="robot-task-btn" bind:tap="goHistory">
+    历史任务
+      <text class="iconfont icon-btn_robot_arrowcircleright" style="color:#17B5AC;"></text>
+  </view>
+</view>

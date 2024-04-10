@@ -1,0 +1,12 @@
+<!--pages/task/components/taskItem/taskItem.wxml-->
+<view class="task-item">
+  <image wx:if="{{checkIndex!==undefined && index === checkIndex}}" class="task-item-check" mode="scaleToFill" src="../../../../../assets/images/task-check.png" ></image>
+  <image wx:else class="task-item-check" mode="scaleToFill" src="../../../../../assets/images/task.png" ></image>
+  <view class="task-item-title">
+    <view><slot name="title"></slot></view>
+  </view>
+  <view class="task-item-container">
+    <slot>
+    </slot>
+  </view>
+</view>

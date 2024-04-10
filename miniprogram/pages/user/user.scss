@@ -1,0 +1,53 @@
+/* pages/user/user.wxss */
+
+.user-container{
+  background-color: #F6F6F6;
+  .user-info-container{
+    display: flex;
+    height: 220rpx;
+    .user-name{
+      color: #ffffff;
+      font-size: 40rpx;
+      margin-top: 24rpx;
+    }
+  }
+  .user-panel{
+    padding: 32rpx;
+    .user-info{
+      margin-top: 50rpx;
+    }
+    .user-info-operate{
+      margin-top: 32rpx;
+    }
+    .logout{
+      margin-top: 32rpx;
+      background-color: #ffffff;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80rpx;
+    }
+}
+  .user-panel-item{
+    height: 96rpx;
+  }
+  .user-panel,.user-info-panel{
+    padding:32rpx;
+    border-radius: 8rpx;
+  }
+  .user-info-panel{
+    padding-top: 0;
+  }
+  .user-logout{
+    background-color: #FFFFFF;
+    height: 72rpx;
+    padding: 18rpx 0;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
+    border-radius: 8rpx;
+    color: #333333;
+    font-size: 24rpx;
+    text-align: center;
+  }
+}

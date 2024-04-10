@@ -1,0 +1,63 @@
+/* pages/analyse/dataManage/components/historyRecord/historyRecord.wxss */
+.history-form-container{
+  display: flex;
+  .history-form-item{
+    min-width: 200rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    color: #333333;
+    background-color: #ffffff;
+    font-size: 28rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    padding: 0 10rpx;
+  }
+}
+.history-container{
+  .history-record{
+    display: flex;
+    flex-wrap: wrap;
+    .history-record-item{
+      width: 50%;
+      color: #666666;
+    }
+    .history-record-item-title{
+      color: #333333;
+      font-size: 24rpx;
+    }
+  }
+}
+.history-container-title{
+  color: #000000;
+  font-size:28rpx ;
+  font-weight: bold;
+  .history-container-file{
+    color: #149F97;
+  }
+}
+.btns{
+  padding: 32rpx 0 ;
+  height: 112rpx;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .btn{
+    width:684rpx;
+    height:72rpx;
+    padding:18rpx;
+    font-size:24rpx;
+    border-radius: 8rpx;
+  }
+}
+.fineChart-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200rpx;
+}

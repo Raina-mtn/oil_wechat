@@ -1,0 +1,21 @@
+<!--pages/robot/components/robotImage/robotImage.wxml-->
+<view wx:if="{{!loading}}" class="robot-image">
+  <van-image
+    wx:if="{{img.url}}"
+    width="100%"
+    height="356rpx"
+    fit="fill"
+    src="{{img.url}}"
+  />
+  <view wx:else class="robot-loading">暂无图片</view>
+  <view class="robot-image-time">
+  <view>{{img.datetime||''}}</view>
+    <view class="robot-image-refresh" bind:tap="getImage">
+      <text class="iconfont icon-btn_robot_refresh"></text>
+      刷新
+    </view>
+  </view>
+</view>
+<view wx:else class="robot-loading">
+  <van-loading size="24px">加载中...</van-loading>
+</view>

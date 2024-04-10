@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "analyse-log": "./components/log/index",
+    "analyse-steps": "./components/steps/index",
+    "analyse-gas": "./components/gas/index",
+    "analyse-temperature": "./components/temperature/index",
+    "analyse-status": "./components/status/index",
+    "calculation-dialog":"./components/calculation/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "色谱分析",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

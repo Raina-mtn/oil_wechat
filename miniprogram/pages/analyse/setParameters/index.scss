@@ -1,0 +1,29 @@
+/* pages/analyse/setParameters/index.wxss */
+.stepper-input{
+  background-color: #fff !important;
+}
+.van-stepper__minus, .van-stepper__plus {
+  background-color: #fff !important;
+  color: #999999;
+}
+.temperature-cell{
+  margin-bottom: 16rpx;
+}
+.temperature-title{
+  margin-bottom: 16rpx;
+}
+
+.parameters-btns{
+  height: 112rpx;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .btn{
+    width: 264rpx;
+    height: 80rpx;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "history-item":"./components/historyItem/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "历史任务",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

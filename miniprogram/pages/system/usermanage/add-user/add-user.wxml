@@ -1,0 +1,69 @@
+<!--pages/system/usermanage/add-user/add-user.wxml-->
+<view class="container">
+<!-- 头像 -->
+  <view class="avatar">
+    <view class="avatar-detail">
+      <image src="/assets/images/user_avatar.png" bind:tap="previewBigImage"/>
+      <image src="/assets/images/btn_replaceavatar.png" class="photo" mode="" bind:tap="chooseImageTap" />
+    </view>
+  </view>
+  <!-- 中间内容 -->
+  <view class="info">
+    <view class="list-info" style="background-color: #ffffff;padding: 15rpx 20rpx;">
+      <view class="content">
+        <label>用户姓名</label>
+        <input type="text" value="{{ form.accountName }}" style='text-align:right' placeholder="请输入" bindinput="confirmAccountName"/>
+      </view>
+      <view class="content">
+        <label>用户账号</label>
+        <input type="text" value="{{ form.userName }}" style='text-align:right' placeholder="请输入" bindinput="confirmUserName" />
+      </view>
+      <view style="border-bottom: 1px solid #EAEAEA;">
+        <van-cell 
+          custom-class="unityouself" 
+          title="所属单位" 
+          is-link 
+          bind:tap="onClickUnit" 
+          value="{{form.organizationName}}" 
+          size="large"
+          border="{{false}}"
+        />
+        <van-popup position="bottom" custom-style="height: 50%;" show="{{showUnit}}">
+          <van-picker 
+            show-toolbar 
+            title="所属部门" 
+            value-key="organizationName"
+            columns="{{ columns }}" 
+            bind:cancel="onClickUnit" 
+            bind:confirm="onConfirmUnit"/>
+        </van-popup>
+      </view>
+      <view>
+        <van-cell 
+          custom-class="unityouself" 
+          title="职务" 
+          is-link 
+          bind:tap="onClickPost" 
+          value="{{form.roleName}}" 
+          size="large"
+          border="{{false}}"
+        />
+        <van-popup position="bottom" custom-style="height: 50%;" show="{{showPost}}">
+          <van-picker 
+            show-toolbar 
+            title="职务" 
+            value-key="roleName"
+            columns="{{ columns }}" 
+            bind:cancel="onClickPost" 
+            bind:confirm="onConfirmPost"/>
+        </van-popup>
+      </view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="button">
+    <van-button  custom-class="delete-button" color="#149F97" plain bind:tap="cancel">取消</van-button>
+    <!-- <van-button custom-class="confirm-button" color="#149F97" bind:tap="onSubmitForm">确认</van-button> -->
+    <button class="submit-button" form-type="submit" bind:tap="confirmAdd">确认</button>
+  </view>
+</view>

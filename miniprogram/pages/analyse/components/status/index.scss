@@ -1,0 +1,29 @@
+/* pages/analyse/components/status/index.wxss */
+.status-container{
+  display: flex;
+  justify-content: space-between;
+  .status-item{
+    width: 222rpx;
+    height: 164rpx;
+    background-color: #FFFFFF;
+    border: 2rpx solid #EEEEEE;
+    border-radius: 8rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .status-label{
+      color: #666666;
+      font-size: 24rpx;
+    }
+    .status-data{
+      color: #149F97;
+      font-size: 40rpx;
+    }
+    .status-unit{
+      color: #666666;
+      font-size: 24rpx;
+      margin-left: 8rpx;
+    }
+  }
+}

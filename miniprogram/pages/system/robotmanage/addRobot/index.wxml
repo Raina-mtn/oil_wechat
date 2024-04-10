@@ -1,0 +1,51 @@
+<!--pages/system/unitmanage/addStation/index.wxml-->
+<view class="container">
+  <view class="task-create">
+    <van-field
+      label="机器人名称"
+      model:value="{{ robotName }}"
+      placeholder="请输入"
+      input-align="right"
+      label-class="task-create-title"
+    />
+    <van-field
+      label="机器人ID"
+      model:value="{{ robotId }}"
+      placeholder="请输入"
+      input-align="right"
+      label-class="task-create-title"
+    />
+    <van-cell title="所属单位" is-link title-style="color:#646566;" bind:tap="openSubstationShow" >
+      {{unit.organizationName}}
+    </van-cell>
+    <van-field
+      wx:if="{{isAdd}}"
+      label="工作站名称"
+      model:value="{{ workstationName }}"
+      placeholder="请输入"
+      input-align="right"
+      label-class="task-create-title"
+    />
+    <van-field
+      wx:if="{{isAdd}}"
+      label="工作站ID"
+      model:value="{{ workstationId }}"
+      placeholder="请输入"
+      input-align="right"
+      label-class="task-create-title"
+    />
+  </view>
+</view>
+<view class="task-create-btns">
+  <van-button color="#FA3320" plain custom-class="btn" custom-style="background-color:#FA33200D;" bind:click="cancel">取消</van-button>
+  <van-button color="#149F97" custom-class="btn" bind:click="submit">确认</van-button>
+</view>
+<van-popup show="{{ substationShow }}" position="bottom" bind:close="closeSubstationShow">
+  <van-picker
+    show-toolbar 
+    value-key='organizationName'
+    columns="{{ columns }}" 
+    bind:cancel="closeSubstationShow"
+    bind:confirm="onConfirm"
+  />
+</van-popup>

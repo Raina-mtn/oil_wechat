@@ -1,0 +1,11 @@
+<!--pages/task/components/taskItem/taskItem.wxml-->
+<view class="task-item">
+  <view class="task-item-title">
+    <view class="iconfont icon-ic_taskname task-item-icon" style="color: #2BA8A0;"></view>
+    <view>{{title}}</view>
+  </view>
+  <view class="task-item-container">
+    <slot>
+    </slot>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/task/components/taskDelete/taskDelete.wxml-->
+<van-dialog
+  use-slot
+  show="{{ show }}"
+  show-confirm-button="{{false}}"
+>
+  <view class="dialog-container">
+    <image class="delete-icon" src="../../../../../assets/images/ic_remind_collect.png" mode="aspectFill"/>
+    <view wx:if="{{!isCancel}}">点击确认收藏该任务</view>
+    <view wx:else>点击确认取消收藏该任务</view>
+    <view class="btns">
+      <van-button custom-class="btn" plain bind:tap="closeDialog">取消</van-button>
+      <van-button custom-class="btn" color="#14A097" bind:tap="submit">确认</van-button>
+    </view>
+  </view>
+</van-dialog>

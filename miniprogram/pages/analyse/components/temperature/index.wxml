@@ -1,0 +1,11 @@
+<!--pages/analyse/components/temperature/temperature.wxml-->
+<view class="temperature-container">
+  <image class="temperature-bg" src="/assets/images/temperature_bg.png" mode=""/>
+  <view wx:for="{{temperatureList}}" wx:key="index" class="temperature-item">
+    <view class="temperature-label">{{item.label}}</view>
+    <view style="display: flex;align-items: center;">
+      <view class="temperature-data">{{list[item.key]||'0'}}℃</view>
+      <!-- <view class="temperature-setpoint">设定值：{{item.setpoint}}℃</view> -->
+    </view>
+  </view>
+</view>

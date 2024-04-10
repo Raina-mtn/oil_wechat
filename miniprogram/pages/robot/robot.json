@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "robot-select":"../../components/robotSelect/robotSelect",
+    "robot-info":"./components/robotInfo/robotInfo",
+    "robot-control":"./components/robotControl/robotControl",
+    "robot-image":"./components/robotImage/robotImage",
+    "robot-task":"./components/robotTask/robotTask",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarBackgroundColor": "#149F97",
+  "navigationBarTitleText": "机器人",
+  "navigationBarTextStyle": "white",
+  "backgroundColorContent": "#F6F6F6"
+}

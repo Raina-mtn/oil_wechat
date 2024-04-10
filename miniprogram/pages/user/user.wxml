@@ -1,0 +1,61 @@
+<!--pages/user/user.wxml-->
+<view class="user-container">
+  <view class="user-info-container">
+    <view style="position: fixed;width: 100%;height: 18%;top: 0;">
+      <image style="z-index: 1;height: 100%;width: 800rpx;" src="/assets/images/bg_mine.png" mode="" />
+    </view>
+    <view style="z-index: 22;display: flex;width: 100%;">
+      <image style="width: 120rpx;height: 120rpx;border-radius: 50%;margin: 20rpx 24rpx 0 48rpx;" mode="aspectFill" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+      <view class="user-name">
+        <view>{{userInfomation.username}}</view>
+        <!-- <view>ID：23166</view> -->
+      </view>
+    </view>
+  </view>
+  <view class="user-panel">
+    <view class="user-info">
+      <van-cell value="{{userInfomation.username}}" size="large">
+        <view slot="title" style="display: flex;align-items: center;">
+          <image src="/assets/images/ic_useraccount.png" style="width: 35rpx;height: 35rpx;" mode=""/>
+          <view class="useraccount" style="margin-left: 10rpx;">用户账号</view>
+        </view>
+      </van-cell>
+      <van-cell value="{{userInfomation.accountName}}" size="large">
+        <view slot="title" style="display: flex;align-items: center;">
+          <image src="/assets/images/ic_username.png" style="width: 35rpx;height: 35rpx;" mode=""/>
+          <view class="username" style="margin-left: 10rpx;">用户姓名</view>
+        </view>
+      </van-cell>
+      <van-cell value="{{userInfomation.organizationName}}" size="large">
+        <view slot="title" style="display: flex;align-items: center;">
+          <image src="/assets/images/ic_affiliatedunit.png" style="width: 35rpx;height: 35rpx;" mode=""/>
+          <view class="unit" style="margin-left: 10rpx;">所属单位</view>
+        </view>
+      </van-cell>
+      <van-cell value="{{userInfomation.roleName}}" size="large">
+        <view slot="title" style="display: flex;align-items: center;">
+          <image src="/assets/images/ic_duties.png" style="width: 35rpx;height: 35rpx;" mode=""/>
+          <view class="unit" style="margin-left: 10rpx;">职务</view>
+        </view>
+      </van-cell>
+    </view>
+    <view class="user-info-operate">
+      <van-cell is-link size="large" bind:tap="modifyInfo">
+        <view slot="title" style="display: flex;align-items: center;">
+          <image src="/assets/images/ic_modify.png" style="width: 35rpx;height: 35rpx;" mode=""/>
+          <view class="modifyInfo" style="margin-left: 10rpx;">个人信息编辑</view>
+        </view>
+      </van-cell>
+      <van-cell is-link size="large" bind:tap="changePassword">
+        <view slot="title" style="display: flex;align-items: center;">
+          <image src="/assets/images/ic_changepassword.png" style="width: 35rpx;height: 35rpx;" mode=""/>
+          <view class="editpassword" style="margin-left: 10rpx;">修改密码</view>
+        </view>
+      </van-cell>
+    </view>
+    <view class="logout" bind:tap="submit">
+        <view>退出登录</view>
+    </view>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

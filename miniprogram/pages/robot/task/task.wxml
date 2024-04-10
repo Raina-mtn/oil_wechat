@@ -1,0 +1,12 @@
+<!--pages/task/task.wxml-->
+<van-tabs active="{{active}}" color="#2BA8A0" line-width="125" title-active-color="#2BA8A0" title-inactive-color="#666666" tab-class="task-tab" tab-active-class="task-tab-active" bind:change="activeChange">
+  <van-tab title="任务列表" name="list">
+    <task-list></task-list>
+  </van-tab>
+  <van-tab title="收藏任务" name="collect">
+    <task-collect wx:if="{{active==='collect'}}"></task-collect>
+  </van-tab>
+  <van-tab title="周期任务" name="cycle">
+    <task-cycle wx:if="{{active==='cycle'}}"></task-cycle>
+  </van-tab>
+</van-tabs>

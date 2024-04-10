@@ -1,0 +1,27 @@
+<!--pages/system/unitmanage/addStation/index.wxml--><view class="container">
+  <view class="task-create">
+    <van-cell title="运营部名称" value="{{selectUnitItem.name}}" is-link title-style="color:#646566;" bind:tap="openSubstationShow" />
+    <van-field
+      label="变电站名称"
+      model:value="{{ value }}"
+      placeholder="请输入"
+      input-align="right"
+      bind:change="onChange"
+      label-class="task-create-title"
+    />
+  </view>
+</view>
+<view class="task-create-btns">
+  <van-button color="#FA3320" plain custom-class="btn" custom-style="background-color:#FA33200D;" bind:tap="onBack">取消</van-button>
+  <van-button color="#149F97" custom-class="btn" bind:tap="onSubmit">确认</van-button>
+</view>
+<van-popup show="{{ substationShow }}" position="bottom" bind:close="closeSubstationShow">
+  <van-picker
+    show-toolbar 
+    value-key="name"
+    columns="{{ columns }}" 
+    default-index="{{ selectUnitIndex }}"
+    bind:cancel="closeSubstationShow"
+    bind:confirm="onConfirm"
+  />
+</van-popup>

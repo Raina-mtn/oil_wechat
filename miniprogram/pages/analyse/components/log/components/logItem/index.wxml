@@ -1,0 +1,8 @@
+<!--pages/analyse/components/log/components/logItem/index.wxml-->
+<view class="log-item-container">
+    <view class="log-item-info-title" style="color: #333;">
+      <view class="log-item-circle" style="background-color: #00C569;"></view>
+      {{log.log}}
+    </view>
+    <view class="log-item-info-time">{{log.uploadTime}}</view>
+</view>

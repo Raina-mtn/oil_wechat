@@ -1,0 +1,9 @@
+<!--pages/analyse/dataManage/index.wxml-->
+<van-tabs active="{{ active }}" color="#2BA8A0" line-width="188" title-active-color="#2BA8A0" title-inactive-color="#666666" tab-class="task-tab" tab-active-class="task-tab-active" bind:change="onChange">
+  <van-tab title="历史记录库" name='record'>
+    <history-record wx:if="{{active==='record'}}" id='record'></history-record>
+  </van-tab>
+  <van-tab title="样品谱图库" name='picture'>
+    <fine-chart wx:if="{{active==='picture'}}"></fine-chart>
+  </van-tab>
+</van-tabs>

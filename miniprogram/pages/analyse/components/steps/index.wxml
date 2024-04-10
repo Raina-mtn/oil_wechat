@@ -1,0 +1,32 @@
+<!-- 步骤条 支持步长2-6-->
+<scroll-view scroll-x class="steps-box-container" scroll-left="{{(750/9)*(currentStep - 2)}}">
+  <view class="steps-box">
+    <block
+      wx:for="{{list}}"
+      wx:key="item"
+    >
+      <view
+        class="steps-item {{item.status==1?'active':''}}"
+        style="--len:{{list.length }}"
+      >
+      <!-- 步骤序号 -->
+      <!-- 已完成 -->
+       <view class="steps-index-bg {{item.status===-1 && 'unfinish'}}"></view>
+        <view
+          class="steps-index"
+          wx:if="{{item.status===1}}"
+        >
+          <view class="checked-icon"></view>
+        </view>
+        <!-- 当前进行 未完成 -->
+        <view
+          class="steps-index {{item.status==0 && 'active'}}"
+          wx:else
+        >{{index+1}}</view>
+
+        <!-- 步骤标题 -->
+        <text class="{{item.status==0 && 'text-active'}}">{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

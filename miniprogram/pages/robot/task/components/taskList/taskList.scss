@@ -1,0 +1,31 @@
+/* pages/task/components/taskList/taskList.wxss */
+.task-list-container{
+  .task-list{
+    margin-bottom: 140rpx;
+  }
+  .task-list-icon{
+    color: #149F97;
+    font-size: 96rpx;
+    position: fixed;
+    bottom: 130rpx;
+    right: 30rpx;
+  }
+  .btns{
+    padding: 32rpx 0 ;
+    height: 112rpx;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .btn{
+      width:148rpx;
+      height:72rpx;
+      padding:18rpx;
+      font-size:24rpx;
+      border-radius: 8rpx;
+    }
+  }
+}

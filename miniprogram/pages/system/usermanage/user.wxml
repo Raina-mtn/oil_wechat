@@ -1,0 +1,77 @@
+<!--pages/system/usermanage/user.wxml-->
+<view class="container">
+<!-- 选择框 -->
+  <view class="form-container">
+    <view class="form-item">
+      <picker bindchange="onConfirmOrganization" range-key="organizationName" range="{{organizationColumns}}">
+        <view wx:if="{{organizationName}}">
+          <text>{{organizationName}}</text>
+          <van-icon name="cross" data-propvalue="organizationId" data-proplable="organizationName" catch:tap="clearPicker" />
+        </view>
+        <view wx:else>
+          <text>所属单位</text>
+          <text class="iconfont icon-btn_unfold"></text>
+        </view>
+      </picker>
+    </view>
+    <view class="form-item" style="margin-left:32rpx;" bind:tap="onClickPost">
+      <picker bindchange="onConfirmRole" range-key="roleName" range="{{roleColumns}}">
+        <view wx:if="{{roleName}}">
+          <text>{{roleName}}</text>
+          <van-icon name="cross" data-propvalue="roleId" data-proplable="roleName" catch:tap="clearPicker" />
+        </view>
+        <view wx:else>
+          <text>所属职务</text>
+          <text class="iconfont icon-btn_unfold"></text>
+        </view>
+      </picker>
+    </view>
+  </view>
+<!-- 信息展示 -->
+  <view class="bottom-list">
+    <view 
+      wx:for="{{tableList}}"
+      wx:key="index"
+      wx:for-item="table"
+      bind:tap="onClick"
+      data-user-details="{{table}}"
+      data-id="{{table.id}}"
+      class="list"
+    >
+      <view class="list-container" >
+        <view class="list-body" style="display: flex;">
+          <view class="avatar-container">
+            <image class="avatar" mode="aspectFill" src="/assets/images/user_avatar.png"/>
+          </view>
+          <view class="detail-info">
+            <view class="detail-info-right">
+              <text  wx:if="{{table.accountName !== null && table.accountName !== 'null'}}">{{table.accountName}}</text>
+              <view class="detail-status">
+                <view wx:if="{{table.roleName === '超级管理员'}}" class="super-admin">
+                  {{table.roleName}}
+                </view>
+                <view wx:if="{{table.roleName === '管理员'}}" class="admin">
+                  {{table.roleName}}
+                </view>
+                <view wx:if="{{table.roleName === '操作员'}}" class="operator">
+                  {{table.roleName}}
+                </view>
+              </view>
+              <text class="userId">
+                {{table.username}}
+              </text>
+              <view class="unit">
+                <text>{{table.organizationName}}</text>
+                <van-icon name="arrow" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 新增按钮 -->
+  <view class="add-button" bind:tap="onClickAdd">
+    <text class="iconfont icon-btn_add" style="font-size:100rpx;color: #52b1ab;"></text>
+  </view>
+</view>

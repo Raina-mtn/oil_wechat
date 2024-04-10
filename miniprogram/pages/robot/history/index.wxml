@@ -1,0 +1,56 @@
+<!--pages/robot/history/indx.wxml-->
+<view class="history-task-container">
+  <view class="history-form-container">
+    <view class="history-form-item" bind:tap="openPicker">
+      <!-- <text>任务类型</text>
+      <text class="iconfont icon-btn_unfold"></text> -->
+        <picker bindchange="bindPickerChange" range-key="label" range="{{columns}}">
+          <view wx:if="{{taskName}}">
+            <text>{{taskName}}</text>
+            <van-icon name="cross" data-propvalue="taskType" data-proplable="taskName" catch:tap="clearPicker" />
+          </view>
+          <view wx:else>
+            <text>任务类型</text>
+            <text class="iconfont icon-btn_unfold"></text>
+          </view>
+        </picker>
+    </view>
+      <view class="history-form-item" style="width:250rpx;margin-left:32rpx;">
+        <picker mode="date" header-text="选择时间"  value="{{startTime}}" data-type="startTime" bindchange="bindDateChange">
+          <view wx:if="{{startTime}}">
+            <text>{{startTime}}</text>
+            <van-icon name="cross" data-type="startTime" catch:tap="clearDate" />
+          </view>
+          <view wx:else>
+            <text>开始时间</text>
+            <text class="iconfont icon-btn_unfold"></text>
+          </view>
+        </picker>
+      </view>
+      <view class="history-form-item" style="width:250rpx;margin-left:32rpx;">
+        <picker mode="date" header-text="选择时间"  value="{{endTime}}" data-type="endTime" bindchange="bindDateChange">
+          <view wx:if="{{endTime}}">
+            <text>{{endTime}}</text>
+            <van-icon name="cross" data-type="endTime" catch:tap="clearDate" />
+          </view>
+          <view wx:else>
+            <text>结束时间</text>
+            <text class="iconfont icon-btn_unfold"></text>
+          </view>
+        </picker>
+      </view>
+  </view>
+  <view wx:if="{{list.length}}" class="history-container">
+    <history-item wx:for="{{list}}" wx:key="{{item.taskId}}" title="{{item.taskName}}">
+      <view>点位数量：{{item.taskAllNum}}</view>
+      <view>任务类型：<van-tag color="#D8F4EF" text-color="#42BDAE" size="medium">{{item.taskType===1?'实时任务':'周期任务'}}</van-tag></view>
+      <view>任务时间：{{item.planTime}}</view>
+    </history-item>
+  </view>
+  
+  <view wx:else class="history-nodata-container">
+    <image src="../../../assets/images/noData.png" style="width:520rpx;height:408rpx;margin-bottom: 42rpx;"/>
+    <view>暂无内容</view>
+  </view>
+</view>
+<van-dialog id="van-dialog" />

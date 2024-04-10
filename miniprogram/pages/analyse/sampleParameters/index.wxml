@@ -1,0 +1,49 @@
+<!--pages/analyse/samplingParameters.wxml-->
+<view class="container">
+  <van-cell-group >
+    <van-cell title="热导极性">
+      <van-switch 
+        model:checked="{{ btcd }}"
+        active-color="#149F97"
+        inactive-color="#C5C5C5"
+        bind:change="thermalChange" />
+    </van-cell>
+  </van-cell-group>
+
+  <view style="margin-top:32rpx;">
+    <van-cell-group title="采集时间（分钟）">
+      <van-field
+        value="{{ ch0Time }}"
+        clearable
+        label="通道一"
+        placeholder="请输入"
+        input-align="right"
+        data-key="ch0Time"
+        bind:change="onChange"
+      />
+      <van-field
+        value="{{ ch1Time }}"
+        clearable
+        label="通道二"
+        placeholder="请输入"
+        input-align="right"
+        data-key="ch1Time"
+        bind:change="onChange"
+      />
+      <van-field
+        value="{{ ch2Time }}"
+        clearable
+        label="采集三"
+        placeholder="请输入"
+        input-align="right"
+        data-key="ch2Time"
+        bind:change="onChange"
+      />
+    </van-cell-group>
+  </view>
+</view>
+
+<view class="parameters-btns">
+  <van-button custom-class="btn" plain bind:tap="cancel">取消</van-button>
+  <van-button custom-class="btn" color="#14A097" bind:tap="submit">确认</van-button>
+</view>

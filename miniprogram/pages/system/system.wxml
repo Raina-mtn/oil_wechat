@@ -1,0 +1,37 @@
+<!--pages/system/system.wxml-->
+<view class="container">
+   <view class="manage-configure-background">
+    <view class="icon-button">
+      <image 
+      class="icon-button-img"
+      src="../../assets/images/ic_unitmanage.png"
+      bind:tap="onClickUnit"
+      mode=""/>
+      <view style="font-size: small;">单位管理</view>
+    </view>
+    <view class="icon-button">
+      <image 
+      class="icon-button-img"
+      src="../../assets/images/ic_robotmanage.png"
+      bind:tap="onClickRobot" 
+      mode=""/>
+      <view style="font-size: small;">机器人管理</view>
+    </view>
+    <view class="icon-button">
+      <image 
+      class="icon-button-img"
+      src="../../assets/images/ic_devicemanage.png"
+      bind:tap="onClickDevice"
+      mode=""/>
+      <view style="font-size: small;">设备管理</view>
+    </view>
+    <view class="icon-button">
+      <image 
+      class="icon-button-img"
+      src="../../assets/images/ic_usermanage.png"
+      bind:tap="onClickUser"
+      mode=""/>
+      <view style="font-size: small;">用户管理</view>
+    </view>
+   </view>
+</view>

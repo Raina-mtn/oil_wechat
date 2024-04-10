@@ -1,0 +1,72 @@
+<!--pages/analyse/analyse.wxml-->
+<!-- 运行日志 -->
+<analyse-log id="log"></analyse-log>
+<view class="container">
+  <view class="analyse-info">
+    <view class="analyse-info-title">
+      <view class="title">{{taskInfo.currentDeviceName}}</view>
+      <view class="analyse-info-status">
+        <view class="analyse-info-cycle">
+            <view class="analyse-info-inner"></view>
+        </view>
+        正常
+      </view>
+    </view>
+    <!-- 步骤条 -->
+    <analyse-steps id='step'></analyse-steps>
+    <!-- 操作按钮 -->
+    <view class="analyse-btns">
+      <view wx:for="{{btns}}" wx:key="{{btns.label}}" class="analyse-btn" bind:tap="{{item.method}}">
+        <text class="iconfont {{item.icon}} analyse-btn-icon"></text>
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 气体 -->
+  <view class="analyse-gas">
+    <view class="analyse-title">
+      <view class="title">气体</view>
+      <view wx:if="{{isGasCollapse}}" class="analyse-fold" bind:tap="changeGasCollapse">
+        展开
+        <text class="iconfont icon-btn_unfold"></text>
+      </view>
+      <view wx:else="" class="analyse-fold" bind:tap="changeGasCollapse">
+        收起
+        <text class="iconfont icon-btn_fold"></text>
+      </view>
+    </view>
+    <analyse-gas wx:if="{{!isGasCollapse}}" list="{{pressureList}}"></analyse-gas>
+  </view>
+  <!-- 温控 -->
+  <view class="analyse-temperature">
+    <view class="analyse-title">
+      <view class="title">温控</view>
+      <view wx:if="{{isTemperatureCollapse}}" class="analyse-fold" bind:tap="changeTemperatureCollapse">
+        展开
+        <text class="iconfont icon-btn_unfold"></text>
+      </view>
+      <view wx:else="" class="analyse-fold" bind:tap="changeTemperatureCollapse">
+        收起
+        <text class="iconfont icon-btn_fold"></text>
+      </view>
+    </view>
+    <analyse-temperature wx:if="{{!isTemperatureCollapse}}" list="{{temporartList}}"></analyse-temperature>
+  </view>
+  <!-- 其他状态 -->
+  <view class="analyse-status">
+    <view class="analyse-title">
+      <view class="title">其他状态</view>
+      <view wx:if="{{isStatusCollapse}}" class="analyse-fold" bind:tap="changeStatusCollapse">
+        展开
+        <text class="iconfont icon-btn_unfold"></text>
+      </view>
+      <view wx:else="" class="analyse-fold" bind:tap="changeStatusCollapse">
+        收起
+        <text class="iconfont icon-btn_fold"></text>
+      </view>
+    </view>
+    <analyse-status wx:if="{{!isStatusCollapse}}" list="{{otherList}}"></analyse-status>
+  </view>
+</view>
+<calculation-dialog id="calculation-dialog"></calculation-dialog>
+<van-dialog id="van-dialog" />

@@ -1,0 +1,13 @@
+<!--pages/analyse/calParameters/parametersItem/index.wxml-->
+<view class="parameters-item">
+  <view class="parameters-item-title">
+    <image class="parameters-item-title-icon" src="{{iconSrc}}" mode=""/>
+    {{parameterItem.name}}
+  </view>
+  <view class="parameters-item-info">
+    <view class="parameters-info-item" wx:for="{{parameterList}}" wx:key="{{item.label}}">
+      <text>{{item.label}}</text>
+      <text class="parameters-info-item-data">{{parameterItem[item.key]}}</text>
+    </view>
+  </view>
+</view>

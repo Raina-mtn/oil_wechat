@@ -1,0 +1,39 @@
+/* pages/robot/components/robotControl/robotControl.wxss */
+.robotControl{
+  background-color: #fff;
+  margin: 24rpx 0;
+  padding: 16rpx;
+  .robotControl-icon{
+    color: #149F97;
+    font-size: 28rpx;
+  }
+  .robotControl-title{
+    display: flex;
+    justify-content: space-between;
+    color: #333333;
+  }
+  .robotControl-btns{
+    padding: 16rpx 0;
+    display: flex;
+    justify-content: space-between;
+    .info{
+      color: #333333;
+      font-size: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .robotControl-btns-group{
+      width: 210rpx;
+      height: 216rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .robotControl-btn{
+        height:64rpx;
+        border:1px solid #149F97;
+        border-radius: 8rpx;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+
+var filter = {
+  deviceNum:function (deviceIds){
+    return deviceIds?deviceIds.split(',').length:0
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+	deviceNum: filter.deviceNum
+}

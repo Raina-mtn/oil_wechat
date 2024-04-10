@@ -1,0 +1,27 @@
+/* pages/task/components/taskDelete/taskDelete.wxss */
+.dialog-container{
+  text-align: center;
+  color: #333333;
+  font-size: 24rpx;
+  .dialog-radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 36rpx 0;
+    .dialog-radio-label{
+      color: #333333;
+      font-size: 28rpx;
+      margin-right: 36rpx;
+    }
+  }
+
+}
+.btns{
+  display: flex;
+  justify-content: space-around;
+  margin: 48rpx 0 ;
+  .btn{
+    width: 264rpx;
+    height: 80rpx;
+  }
+}

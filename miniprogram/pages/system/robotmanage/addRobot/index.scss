@@ -1,0 +1,17 @@
+/* pages/system/unitmanage/addStation/index.wxss */
+.task-create-btns{
+  height: 112rpx;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .btn{
+    width:332rpx;
+    height:72rpx;
+    font-size:24rpx;
+    border-radius: 8rpx;
+  }
+}

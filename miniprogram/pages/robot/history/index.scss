@@ -1,0 +1,28 @@
+/* pages/robot/history/indx.wxss */
+.history-task-container{
+  height: auto;
+  width: 100%;
+  padding: 20rpx;
+}
+.history-form-container{
+  display: flex;
+  .history-form-item{
+    width: 200rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    color: #333333;
+    background-color: #ffffff;
+    font-size: 28rpx;
+    border-radius: 8rpx;
+    text-align: center;
+  }
+}
+
+.history-nodata-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200rpx;
+}

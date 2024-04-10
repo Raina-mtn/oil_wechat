@@ -1,0 +1,41 @@
+<!--pages/system/devicemanage/add-device/add-device.wxml-->
+<view class="container">
+<form>
+  <view class="list-info" style="background-color: #ffffff;padding: 15rpx 20rpx;">
+    <view class="title-content">
+      <view wx:for="{{form}}" wx:key="index">
+        <van-cell
+          wx:if="{{item.el==='picker'}}"
+          title-class="cell-class"
+          label-class="value-class"
+          value-class="value-class"
+          title="{{item.label}}" 
+          is-link 
+          value="{{(!formData[item.prop]&&formData[item.prop]!==0)||formData[item.prop].length===0?'请选择':item.option[formData[item.prop]]}}" 
+          size="large"
+          data-item="{{item}}"
+          bind:tap="openPicker" 
+          border="{{ true }}"
+        />
+        <van-field
+          wx:if="{{item.el==='input'}}"
+          label-class="cell-class"
+          input-class="cell-class"
+          label="{{item.label}}"
+          value="{{ formData[item.prop] }}"
+          input-align="right"
+          placeholder="请输入"
+          border="{{ true }}"
+          data-prop="{{item.prop}}"
+          bind:change="inputChange"
+        />
+      </view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="bottom-button">
+    <van-button custom-class="delete-button" color="red" plain bind:click="cancel">取消</van-button>
+    <van-button custom-class="submit-button" bind:click="submit">确认</van-button>
+  </view>
+  </form>
+</view>

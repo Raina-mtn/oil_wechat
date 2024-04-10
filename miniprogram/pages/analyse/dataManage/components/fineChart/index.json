@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "history-item":"../historyItem/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

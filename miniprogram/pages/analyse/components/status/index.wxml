@@ -1,0 +1,12 @@
+<!--pages/analyse/components/status/index.wxml-->
+<view class="status-container">
+  <view wx:for="{{statusList}}" wx:key="index" class="status-item">
+    <view class="status-label">{{item.label}}</view>
+    <view>
+    <view>
+      <text class="status-data">{{list[item.key]||'0'}}</text>
+      <text wx:if="{{item.unit}}" class="status-unit">{{item.unit}}</text>
+    </view>
+    </view>                     
+  </view>
+</view>
